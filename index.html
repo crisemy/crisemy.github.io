@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cristian Nadj | Senior QA Engineer & Test Architect offering specialized services in Data-Driven Quality Systems and AI-Assisted Automation.">
+    <title>Cristian Nadj | Senior QA Engineer & Test Architect</title>
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="logo-icon">
+                <path
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    stroke="url(#neonGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M8 12L11 15L16 9" stroke="url(#neonGradient)" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M12 6V6.01" stroke="url(#neonGradient)" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M6 12H6.01" stroke="url(#neonGradient)" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M18 12H18.01" stroke="url(#neonGradient)" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <defs>
+                    <linearGradient id="neonGradient" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#00f2fe" />
+                        <stop offset="1" stop-color="#ab47bc" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            CN.
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li class="nav-item-dropdown">
+                <a href="#portfolio">Portfolio <i class="fas fa-chevron-down nav-chevron"></i></a>
+                <ul class="nav-dropdown">
+                    <li><a href="#" onclick="openModal('modal-ai-testing');return false;"><i
+                                class="fas fa-check-double"></i> LLM & Agent Testing</a></li>
+                    <li><a href="#" onclick="openModal('modal-ai-test');return false;"><i
+                                class="fas fa-code-branch"></i> AI Test Generator</a></li>
+                    <li><a href="#" onclick="openModal('modal-ai-pipeline');return false;"><i class="fas fa-cubes"></i>
+                            AI QA Pipeline</a></li>
+                    <li><a href="#" onclick="openModal('modal-qa-lab');return false;"><i class="fas fa-vial"></i> QA
+                            Intelligence Lab</a></li>
+                    <li><a href="#" onclick="openModal('modal-cypress');return false;"><i class="fas fa-flask"></i>
+                            Cypress E2E Framework</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Expertise</a></li>
+            <li><a href="#experience">Experience</a></li>
+        </ul>
+        <a href="#contact" class="btn-primary-small">Contact Me</a>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section-spacing">
+            <div class="hero-content reveal">
+                <p class="subtitle">Senior QA Engineer & Test Architect</p>
+                <h1 class="glitch-text">Engineering <span class="gradient-text">Quality</span> at Scale</h1>
+                <p class="hero-description">20+ years building comprehensive automation frameworks, driving CI/CD
+                    orchestration, and pioneering AI-assisted software testing.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn-primary">Explore Services</a>
+                    <a href="https://github.com/crisemy" target="_blank" class="btn-secondary"><i
+                            class="fab fa-github"></i> GitHub Profile</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio section-spacing">
+            <h2 class="section-title reveal">Featured Open-Source</h2>
+            <p class="section-subtitle reveal">Showcasing experiments in AI, Test Architecture and Data Science</p>
+            <div class="portfolio-grid">
+
+                <div class="portfolio-card glass-panel reveal" onclick="openModal('modal-ai-testing')" role="button"
+                    tabindex="0">
+                    <div class="portfolio-content">
+                        <h3><i class="fas fa-check-double"></i> LLM & Agent Testing</h3>
+                        <p>A comprehensive QA pipeline evaluating Large Language Models, prompts, and dynamic autonomous AI agents using Promptfoo and DeepEval.</p>
+                        <div class="card-footer-row">
+                            <span><span class="tech-tag">Promptfoo</span> <span class="tech-tag">DeepEval</span> <span class="tech-tag">LLMs</span></span>
+                            <span class="card-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card glass-panel reveal" onclick="openModal('modal-ai-test')" role="button"
+                    tabindex="0">
+                    <div class="portfolio-content">
+                        <h3><i class="fas fa-code-branch"></i> AI Test Generator</h3>
+                        <p>Intelligent web tool generating high-quality test cases and Playwright scripts prioritized
+                            through ML-based risk scoring models.</p>
+                        <div class="card-footer-row">
+                            <span><span class="tech-tag">Playwright</span> <span class="tech-tag">AI/GenAI</span> <span
+                                    class="tech-tag">SHAP</span></span>
+                            <span class="card-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card glass-panel reveal" onclick="openModal('modal-ai-pipeline')" role="button"
+                    tabindex="0">
+                    <div class="portfolio-content">
+                        <h3><i class="fas fa-cubes"></i> AI QA Pipeline</h3>
+                        <p>Intelligent regression testing pipeline combining traditional QA automation with data-driven
+                            insights to drastically reduce cycle feedback loop times.</p>
+                        <div class="card-footer-row">
+                            <span><span class="tech-tag">CI/CD</span> <span class="tech-tag">Python</span></span>
+                            <span class="card-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card glass-panel reveal" onclick="openModal('modal-qa-lab')" role="button"
+                    tabindex="0">
+                    <div class="portfolio-content">
+                        <h3><i class="fas fa-vial"></i> QA Intelligence Lab</h3>
+                        <p>A resilience testing and experimentation platform combining chaos engineering, traditional QA
+                            automation and interactive data analysis dashboards.</p>
+                        <div class="card-footer-row">
+                            <span><span class="tech-tag">Data Integration</span> <span
+                                    class="tech-tag">Resilience</span></span>
+                            <span class="card-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card glass-panel reveal" onclick="openModal('modal-cypress')" role="button"
+                    tabindex="0">
+                    <div class="portfolio-content">
+                        <h3><i class="fas fa-flask"></i> Cypress E2E Framework</h3>
+                        <p>A custom-built robust automation framework engineered with Cypress using POM implementation
+                            principles specifically designed for UI scalability.</p>
+                        <div class="card-footer-row">
+                            <span><span class="tech-tag">Cypress</span> <span class="tech-tag">JavaScript</span></span>
+                            <span class="card-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="center-btn reveal">
+                <a href="https://github.com/crisemy" target="_blank" class="btn-secondary">View More on GitHub</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-spacing">
+            <h2 class="section-title reveal">Profile Summary</h2>
+            <div class="about-card glass-panel reveal">
+                <p>I specialize in test architecture design, quality observability, and AI-assisted testing approaches.
+                    Combining a deep understanding of standard practices with data-driven workflows, I strive to
+                    optimize regression scope, reduce defect leakage, and secure release predictability.</p>
+                <p>Equipped with hands-on expertise in <strong>Python, JavaScript, SQL,</strong> and CI/CD pipelines,
+                    and currently pursuing a Master’s Degree in Data Science & AI. I am dedicated to bridging the gap
+                    between rigorous quality control and modern machine learning techniques.</p>
+                <ul class="contact-links">
+                    <li><i class="fas fa-envelope"></i> crisemy@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina (Global/Remote)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section-spacing">
+            <h2 class="section-title reveal">Core Expertise</h2>
+            <div class="services-grid">
+
+                <div class="service-card glass-panel reveal">
+                    <div class="icon-wrapper"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Test Architecture & Frameworks</h3>
+                    <p>Designing and building scalable, maintainable automation frameworks using tools like Cypress,
+                        Playwright, and Selenium to suit enterprise business risks.</p>
+                </div>
+
+                <div class="service-card glass-panel reveal">
+                    <div class="icon-wrapper"><i class="fas fa-robot"></i></div>
+                    <h3>AI-Assisted Testing Strategies</h3>
+                    <p>Implementing ML-based defect analytics, predictive risk modeling, and GenAI code generation to
+                        increase test coverage and efficiency.</p>
+                </div>
+
+                <div class="service-card glass-panel reveal">
+                    <div class="icon-wrapper"><i class="fas fa-sync-alt"></i></div>
+                    <h3>CI/CD Integration</h3>
+                    <p>Seamlessly embedding robust testing pipelines into Jenkins and GitHub Actions directly integrated
+                        into your DevOps ecosystem.</p>
+                </div>
+
+                <div class="service-card glass-panel reveal">
+                    <div class="icon-wrapper"><i class="fas fa-chart-line"></i></div>
+                    <h3>Data-Driven Quality</h3>
+                    <p>Creating robust quality observability tracking platforms using Python/Pandas to analyze defect
+                        density and drive risk-based release decisions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience section-spacing">
+            <h2 class="section-title reveal">Professional Timeline</h2>
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <span class="date">2015 – Present</span>
+                        <h3>Senior QA Engineering Consultant</h3>
+                        <p class="company">Independent Contractor (Global)</p>
+                        <p>Provided QA leadership, architecture design, and automation strategy for international
+                            clients in fintech, SaaS, and cloud platforms. Built predictive modeling engines and reduced
+                            regression cycle times drastically.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <span class="date">2010 – 2015</span>
+                        <h3>Project Director (QA-Focused)</h3>
+                        <p class="company">BimIT SRL</p>
+                        <p>Led cross-functional engineering teams across 30+ software projects, instituting agile
+                            methodologies and implementing comprehensive QA governance practices.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <span class="date">2008 – 2010</span>
+                        <h3>QA Technical Lead</h3>
+                        <p class="company">Global Telecommunications Company</p>
+                        <p>Directed a team of 8 engineers handling automation with Selenium and Python while executing
+                            large-scale performance strategies.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Project Modals -->
+
+    <!-- Modal: LLM Prompt & Agent Testing -->
+    <div id="modal-ai-testing" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-ai-testing-title">
+        <div class="modal-box glass-panel">
+            <button class="modal-close" onclick="closeModal('modal-ai-testing')" aria-label="Close">&times;</button>
+            <div class="modal-header">
+                <span class="modal-icon"><i class="fas fa-check-double"></i></span>
+                <div>
+                    <h2 id="modal-ai-testing-title">LLM Prompt & Agent Testing</h2>
+                    <div class="modal-tags"><span class="tech-tag">Promptfoo</span><span class="tech-tag">DeepEval</span><span class="tech-tag">Python</span><span class="tech-tag">Streamlit</span><span class="tech-tag">LangChain</span></div>
+                </div>
+            </div>
+            <div class="modal-media">
+                <div class="modal-video-placeholder">
+                    <div class="video-placeholder-inner">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Demo video coming soon</span>
+                        <small>Replace with your project screenshot or recording</small>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">A Proof-of-Concept for AI Systems Testing & Evaluation. It ensures generative AI applications are reliable, accurate, and aligned with business guardrails before reaching production.</p>
+                <h4>Key Features</h4>
+                <ul class="modal-features">
+                    <li><i class="fas fa-check-circle"></i> Prompt Regression Testing with Promptfoo to evaluate matrices and assert LLM guardrails</li>
+                    <li><i class="fas fa-check-circle"></i> Autonomous Agent logic evaluation via DeepEval on LangChain components</li>
+                    <li><i class="fas fa-check-circle"></i> Cost-free evaluation wrappers using Groq (Llama 3) for metrics</li>
+                    <li><i class="fas fa-check-circle"></i> Offline, interactive analytics Streamlit Dashboard built with Plotly</li>
+                </ul>
+                <div class="modal-actions">
+                    <a href="https://github.com/crisemy/ai-testing-prompts-agents" target="_blank" class="btn-primary"><i
+                            class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: AI Test Generator -->
+    <div id="modal-ai-test" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-ai-test-title">
+        <div class="modal-box glass-panel">
+            <button class="modal-close" onclick="closeModal('modal-ai-test')" aria-label="Close">&times;</button>
+            <div class="modal-header">
+                <span class="modal-icon"><i class="fas fa-code-branch"></i></span>
+                <div>
+                    <h2 id="modal-ai-test-title">AI Test Generator</h2>
+                    <div class="modal-tags"><span class="tech-tag">Streamlit</span><span class="tech-tag">Groq
+                            LLM</span><span class="tech-tag">scikit-learn</span><span class="tech-tag">SHAP</span><span
+                            class="tech-tag">Playwright</span></div>
+                </div>
+            </div>
+            <div class="modal-media">
+                <img src="./images/ai_test_generator_preview.png" alt="AI Test Generator dashboard preview"
+                    class="modal-screenshot" />
+                <div class="modal-video-placeholder">
+                    <div class="video-placeholder-inner">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Demo video coming soon</span>
+                        <small>Replace src with your screen recording</small>
+                    </div>
+                    <!-- Swap the div above for <video controls src="./videos/ai_test_generator_demo.mp4"></video> -->
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">An intelligent fintech QA web tool that combines a Groq-powered LLM with a
+                    Random Forest ML model to generate, risk-score and prioritize test cases from plain-English user
+                    stories.</p>
+                <h4>Key Features</h4>
+                <ul class="modal-features">
+                    <li><i class="fas fa-check-circle"></i> Generates 10–15 Gherkin-style test cases per User Story via
+                        Llama 3.3 70B</li>
+                    <li><i class="fas fa-check-circle"></i> ML Risk Scoring with Random Forest — predicts High / Medium
+                        / Low defect likelihood</li>
+                    <li><i class="fas fa-check-circle"></i> SHAP Waterfall Plots — full model explainability per test
+                        case</li>
+                    <li><i class="fas fa-check-circle"></i> Batch CSV backlog upload — prioritize thousands of stories
+                        without API calls</li>
+                    <li><i class="fas fa-check-circle"></i> Downloads a ready-to-run Playwright POM Framework + GitHub
+                        Actions CI pipeline</li>
+                </ul>
+                <div class="modal-actions">
+                    <a href="https://github.com/crisemy/ai-test-generator" target="_blank" class="btn-primary"><i
+                            class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: AI QA Pipeline -->
+    <div id="modal-ai-pipeline" class="modal-overlay" role="dialog" aria-modal="true"
+        aria-labelledby="modal-ai-pipeline-title">
+        <div class="modal-box glass-panel">
+            <button class="modal-close" onclick="closeModal('modal-ai-pipeline')" aria-label="Close">&times;</button>
+            <div class="modal-header">
+                <span class="modal-icon"><i class="fas fa-cubes"></i></span>
+                <div>
+                    <h2 id="modal-ai-pipeline-title">AI QA Pipeline</h2>
+                    <div class="modal-tags"><span class="tech-tag">CI/CD</span><span class="tech-tag">Python</span><span
+                            class="tech-tag">GitHub Actions</span></div>
+                </div>
+            </div>
+            <div class="modal-media">
+                <div class="modal-video-placeholder">
+                    <div class="video-placeholder-inner">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Demo video coming soon</span>
+                        <small>Replace with your project screenshot or recording</small>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">An intelligent regression testing pipeline that merges traditional QA
+                    automation with data-driven insights to reduce test cycle times and increase release confidence.</p>
+                <h4>Key Features</h4>
+                <ul class="modal-features">
+                    <li><i class="fas fa-check-circle"></i> Automated regression suite triggered on every push via
+                        GitHub Actions</li>
+                    <li><i class="fas fa-check-circle"></i> Data-driven test selection — only runs tests relevant to
+                        changed modules</li>
+                    <li><i class="fas fa-check-circle"></i> Integrates with Jira / ticketing systems for defect
+                        traceability</li>
+                    <li><i class="fas fa-check-circle"></i> Publishes test result dashboards after every pipeline run
+                    </li>
+                </ul>
+                <div class="modal-actions">
+                    <a href="https://github.com/crisemy/ai-qa-pipeline" target="_blank" class="btn-primary"><i
+                            class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: QA Intelligence Lab -->
+    <div id="modal-qa-lab" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-qa-lab-title">
+        <div class="modal-box glass-panel">
+            <button class="modal-close" onclick="closeModal('modal-qa-lab')" aria-label="Close">&times;</button>
+            <div class="modal-header">
+                <span class="modal-icon"><i class="fas fa-vial"></i></span>
+                <div>
+                    <h2 id="modal-qa-lab-title">QA Intelligence Lab</h2>
+                    <div class="modal-tags"><span class="tech-tag">Data Integration</span><span class="tech-tag">Chaos
+                            Engineering</span><span class="tech-tag">Python</span></div>
+                </div>
+            </div>
+            <div class="modal-media">
+                <div class="modal-video-placeholder">
+                    <div class="video-placeholder-inner">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Demo video coming soon</span>
+                        <small>Replace with your project screenshot or recording</small>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">A resilience testing and experimentation platform combining chaos
+                    engineering with traditional QA automation and interactive data analysis dashboards for deep quality
+                    observability.</p>
+                <h4>Key Features</h4>
+                <ul class="modal-features">
+                    <li><i class="fas fa-check-circle"></i> Chaos Engineering experiments to validate system resilience
+                        under fault conditions</li>
+                    <li><i class="fas fa-check-circle"></i> Interactive dashboards tracking defect density, coverage and
+                        release health</li>
+                    <li><i class="fas fa-check-circle"></i> Modular test harness integrating multiple QA automation
+                        tools</li>
+                    <li><i class="fas fa-check-circle"></i> Reporting engine exportable to CSV / PDF stakeholder formats
+                    </li>
+                </ul>
+                <div class="modal-actions">
+                    <a href="https://github.com/crisemy/qa-intelligence-lab" target="_blank" class="btn-primary"><i
+                            class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Cypress E2E Framework -->
+    <div id="modal-cypress" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-cypress-title">
+        <div class="modal-box glass-panel">
+            <button class="modal-close" onclick="closeModal('modal-cypress')" aria-label="Close">&times;</button>
+            <div class="modal-header">
+                <span class="modal-icon"><i class="fas fa-flask"></i></span>
+                <div>
+                    <h2 id="modal-cypress-title">Cypress E2E Framework</h2>
+                    <div class="modal-tags"><span class="tech-tag">Cypress</span><span
+                            class="tech-tag">JavaScript</span><span class="tech-tag">Page Object Model</span></div>
+                </div>
+            </div>
+            <div class="modal-media">
+                <div class="modal-video-placeholder">
+                    <div class="video-placeholder-inner">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Demo video coming soon</span>
+                        <small>Replace with your project screenshot or recording</small>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">A production-grade Cypress E2E automation framework built on Page Object
+                    Model principles. Designed for scalable UI test coverage across complex SaaS applications.</p>
+                <h4>Key Features</h4>
+                <ul class="modal-features">
+                    <li><i class="fas fa-check-circle"></i> Full Page Object Model (POM) architecture for maximum
+                        maintainability</li>
+                    <li><i class="fas fa-check-circle"></i> Custom Cypress commands and reusable component utilities
+                    </li>
+                    <li><i class="fas fa-check-circle"></i> Cross-browser testing support (Chrome, Firefox, Edge)</li>
+                    <li><i class="fas fa-check-circle"></i> CI-ready with GitHub Actions integration and Mochawesome
+                        HTML reports</li>
+                </ul>
+                <div class="modal-actions">
+                    <a href="https://github.com/crisemy/cypress-framework-the-internet" target="_blank"
+                        class="btn-primary"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="glass-panel">
+        <div class="footer-content">
+            <p class="footer-mission reveal">Empowering organizations to scale quality engineering through <br> comprehensive automation audits, AI-driven testing, <br> and robust architectural design.</p>
+            <h2 class="reveal">Ready to enhance your platform's quality?</h2>
+            <div class="social-links reveal">
+                <a href="mailto:crisemy@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/cristian-gn/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/crisemy" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Cristian Nadj. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
