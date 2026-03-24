@@ -1,0 +1,78 @@
+name: 🤖 Portfolio Agent — Auto Update
+
+on:
+  # Runs automatically on a cron schedule
+  # Cron syntax:  min hour day-of-month month day-of-week
+  # Every Wednesday and Sunday at 03:00 UTC (= 00:00 Buenos Aires, UTC-3)
+  schedule:
+    - cron: "0 3 * * 3"   # Wednesday
+    - cron: "0 3 * * 0"   # Sunday
+
+  # Also allow manual triggering from the GitHub UI (Actions tab → Run workflow)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (fetch only, no commit)"
+        required: false
+        default: "false"
+        type: boolean
+
+jobs:
+  update-portfolio:
+    name: Fetch & Sync Portfolio Data
+    runs-on: ubuntu-latest
+
+    # Required permissions for the GITHUB_TOKEN to push to this repo
+    permissions:
+      contents: write
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch full history so git has access to all commits
+          fetch-depth: 0
+
+      - name: 🐍 Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # The agent only uses the stdlib, so no pip install needed.
+      # If you add external libraries in the future, uncomment the lines below:
+      # - name: 📦 Install dependencies
+      #   run: pip install -r scripts/requirements.txt
+
+      - name: 🤖 Run Portfolio Agent
+        env:
+          # Pass the built-in GITHUB_TOKEN to allow 5000 API req/hr
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            python scripts/update_portfolio.py --dry-run
+          else
+            python scripts/update_portfolio.py
+          fi
+
+      - name: 🔍 Check for changes in projects.json
+        id: check_changes
+        run: |
+          if git diff --quiet data/projects.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 📝 Commit & push if portfolio data changed
+        if: steps.check_changes.outputs.changed == 'true' && github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name  "Portfolio Agent [bot]"
+          git config user.email "portfolio-agent@github.com"
+          git add data/projects.json
+          git commit -m "chore(agent): automated portfolio sync $(date -u '+%Y-%m-%d')"
+          git push origin HEAD
+          echo "✅ Portfolio updated and pushed to GitHub Pages."
+
+      - name: ℹ️ Nothing to update
+        if: steps.check_changes.outputs.changed == 'false'
+        run: echo "✅ No new projects found. Portfolio is already up to date."
