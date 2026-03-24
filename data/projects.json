@@ -1,0 +1,103 @@
+[
+  {
+    "id": "modal-ai-testing",
+    "title": "LLM & Agent Testing",
+    "icon": "fas fa-check-double",
+    "navLabel": "LLM & Agent Testing",
+    "shortDescription": "A comprehensive QA pipeline evaluating Large Language Models, prompts, and dynamic autonomous AI agents using Promptfoo and DeepEval.",
+    "fullDescription": "A Proof-of-Concept for AI Systems Testing & Evaluation. It ensures generative AI applications are reliable, accurate, and aligned with business guardrails before reaching production.",
+    "tags": ["Promptfoo", "DeepEval", "LLMs"],
+    "modalTags": ["Promptfoo", "DeepEval", "Python", "Streamlit", "LangChain"],
+    "features": [
+      "Prompt Regression Testing with Promptfoo to evaluate matrices and assert LLM guardrails",
+      "Autonomous Agent logic evaluation via DeepEval on LangChain components",
+      "Cost-free evaluation wrappers using Groq (Llama 3) for metrics",
+      "Offline, interactive analytics Streamlit Dashboard built with Plotly"
+    ],
+    "githubUrl": "https://github.com/crisemy/ai-testing-prompts-agents",
+    "screenshotUrl": null,
+    "priority": 1,
+    "source": "manual"
+  },
+  {
+    "id": "modal-ai-test",
+    "title": "AI Test Generator",
+    "icon": "fas fa-code-branch",
+    "navLabel": "AI Test Generator",
+    "shortDescription": "Intelligent web tool generating high-quality test cases and Playwright scripts prioritized through ML-based risk scoring models.",
+    "fullDescription": "An intelligent fintech QA web tool that combines a Groq-powered LLM with a Random Forest ML model to generate, risk-score and prioritize test cases from plain-English user stories.",
+    "tags": ["Playwright", "AI/GenAI", "SHAP"],
+    "modalTags": ["Streamlit", "Groq LLM", "scikit-learn", "SHAP", "Playwright"],
+    "features": [
+      "Generates 10–15 Gherkin-style test cases per User Story via Llama 3.3 70B",
+      "ML Risk Scoring with Random Forest — predicts High / Medium / Low defect likelihood",
+      "SHAP Waterfall Plots — full model explainability per test case",
+      "Batch CSV backlog upload — prioritize thousands of stories without API calls",
+      "Downloads a ready-to-run Playwright POM Framework + GitHub Actions CI pipeline"
+    ],
+    "githubUrl": "https://github.com/crisemy/ai-test-generator",
+    "screenshotUrl": "./images/ai_test_generator_preview.png",
+    "priority": 2,
+    "source": "manual"
+  },
+  {
+    "id": "modal-ai-pipeline",
+    "title": "AI QA Pipeline",
+    "icon": "fas fa-cubes",
+    "navLabel": "AI QA Pipeline",
+    "shortDescription": "Intelligent regression testing pipeline combining traditional QA automation with data-driven insights to drastically reduce cycle feedback loop times.",
+    "fullDescription": "An intelligent regression testing pipeline that merges traditional QA automation with data-driven insights to reduce test cycle times and increase release confidence.",
+    "tags": ["CI/CD", "Python"],
+    "modalTags": ["CI/CD", "Python", "GitHub Actions"],
+    "features": [
+      "Automated regression suite triggered on every push via GitHub Actions",
+      "Data-driven test selection — only runs tests relevant to changed modules",
+      "Integrates with Jira / ticketing systems for defect traceability",
+      "Publishes test result dashboards after every pipeline run"
+    ],
+    "githubUrl": "https://github.com/crisemy/ai-qa-pipeline",
+    "screenshotUrl": null,
+    "priority": 3,
+    "source": "manual"
+  },
+  {
+    "id": "modal-qa-lab",
+    "title": "QA Intelligence Lab",
+    "icon": "fas fa-vial",
+    "navLabel": "QA Intelligence Lab",
+    "shortDescription": "A resilience testing and experimentation platform combining chaos engineering, traditional QA automation and interactive data analysis dashboards.",
+    "fullDescription": "A resilience testing and experimentation platform combining chaos engineering with traditional QA automation and interactive data analysis dashboards for deep quality observability.",
+    "tags": ["Data Integration", "Resilience"],
+    "modalTags": ["Data Integration", "Chaos Engineering", "Python"],
+    "features": [
+      "Chaos Engineering experiments to validate system resilience under fault conditions",
+      "Interactive dashboards tracking defect density, coverage and release health",
+      "Modular test harness integrating multiple QA automation tools",
+      "Reporting engine exportable to CSV / PDF stakeholder formats"
+    ],
+    "githubUrl": "https://github.com/crisemy/qa-intelligence-lab",
+    "screenshotUrl": null,
+    "priority": 4,
+    "source": "manual"
+  },
+  {
+    "id": "modal-cypress",
+    "title": "Cypress E2E Framework",
+    "icon": "fas fa-flask",
+    "navLabel": "Cypress E2E Framework",
+    "shortDescription": "A custom-built robust automation framework engineered with Cypress using POM implementation principles specifically designed for UI scalability.",
+    "fullDescription": "A production-grade Cypress E2E automation framework built on Page Object Model principles. Designed for scalable UI test coverage across complex SaaS applications.",
+    "tags": ["Cypress", "JavaScript"],
+    "modalTags": ["Cypress", "JavaScript", "Page Object Model"],
+    "features": [
+      "Full Page Object Model (POM) architecture for maximum maintainability",
+      "Custom Cypress commands and reusable component utilities",
+      "Cross-browser testing support (Chrome, Firefox, Edge)",
+      "CI-ready with GitHub Actions integration and Mochawesome HTML reports"
+    ],
+    "githubUrl": "https://github.com/crisemy/cypress-framework-the-internet",
+    "screenshotUrl": null,
+    "priority": 5,
+    "source": "manual"
+  }
+]
