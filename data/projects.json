@@ -6,8 +6,18 @@
     "navLabel": "LLM & Agent Testing",
     "shortDescription": "A comprehensive QA pipeline evaluating Large Language Models, prompts, and dynamic autonomous AI agents using Promptfoo and DeepEval.",
     "fullDescription": "A Proof-of-Concept for AI Systems Testing & Evaluation. It ensures generative AI applications are reliable, accurate, and aligned with business guardrails before reaching production.",
-    "tags": ["Promptfoo", "DeepEval", "LLMs"],
-    "modalTags": ["Promptfoo", "DeepEval", "Python", "Streamlit", "LangChain"],
+    "tags": [
+      "Promptfoo",
+      "DeepEval",
+      "LLMs"
+    ],
+    "modalTags": [
+      "Promptfoo",
+      "DeepEval",
+      "Python",
+      "Streamlit",
+      "LangChain"
+    ],
     "features": [
       "Prompt Regression Testing with Promptfoo to evaluate matrices and assert LLM guardrails",
       "Autonomous Agent logic evaluation via DeepEval on LangChain components",
@@ -26,8 +36,18 @@
     "navLabel": "AI Test Generator",
     "shortDescription": "Intelligent web tool generating high-quality test cases and Playwright scripts prioritized through ML-based risk scoring models.",
     "fullDescription": "An intelligent fintech QA web tool that combines a Groq-powered LLM with a Random Forest ML model to generate, risk-score and prioritize test cases from plain-English user stories.",
-    "tags": ["Playwright", "AI/GenAI", "SHAP"],
-    "modalTags": ["Streamlit", "Groq LLM", "scikit-learn", "SHAP", "Playwright"],
+    "tags": [
+      "Playwright",
+      "AI/GenAI",
+      "SHAP"
+    ],
+    "modalTags": [
+      "Streamlit",
+      "Groq LLM",
+      "scikit-learn",
+      "SHAP",
+      "Playwright"
+    ],
     "features": [
       "Generates 10–15 Gherkin-style test cases per User Story via Llama 3.3 70B",
       "ML Risk Scoring with Random Forest — predicts High / Medium / Low defect likelihood",
@@ -47,8 +67,15 @@
     "navLabel": "AI QA Pipeline",
     "shortDescription": "Intelligent regression testing pipeline combining traditional QA automation with data-driven insights to drastically reduce cycle feedback loop times.",
     "fullDescription": "An intelligent regression testing pipeline that merges traditional QA automation with data-driven insights to reduce test cycle times and increase release confidence.",
-    "tags": ["CI/CD", "Python"],
-    "modalTags": ["CI/CD", "Python", "GitHub Actions"],
+    "tags": [
+      "CI/CD",
+      "Python"
+    ],
+    "modalTags": [
+      "CI/CD",
+      "Python",
+      "GitHub Actions"
+    ],
     "features": [
       "Automated regression suite triggered on every push via GitHub Actions",
       "Data-driven test selection — only runs tests relevant to changed modules",
@@ -67,8 +94,15 @@
     "navLabel": "QA Intelligence Lab",
     "shortDescription": "A resilience testing and experimentation platform combining chaos engineering, traditional QA automation and interactive data analysis dashboards.",
     "fullDescription": "A resilience testing and experimentation platform combining chaos engineering with traditional QA automation and interactive data analysis dashboards for deep quality observability.",
-    "tags": ["Data Integration", "Resilience"],
-    "modalTags": ["Data Integration", "Chaos Engineering", "Python"],
+    "tags": [
+      "Data Integration",
+      "Resilience"
+    ],
+    "modalTags": [
+      "Data Integration",
+      "Chaos Engineering",
+      "Python"
+    ],
     "features": [
       "Chaos Engineering experiments to validate system resilience under fault conditions",
       "Interactive dashboards tracking defect density, coverage and release health",
@@ -87,8 +121,15 @@
     "navLabel": "Cypress E2E Framework",
     "shortDescription": "A custom-built robust automation framework engineered with Cypress using POM implementation principles specifically designed for UI scalability.",
     "fullDescription": "A production-grade Cypress E2E automation framework built on Page Object Model principles. Designed for scalable UI test coverage across complex SaaS applications.",
-    "tags": ["Cypress", "JavaScript"],
-    "modalTags": ["Cypress", "JavaScript", "Page Object Model"],
+    "tags": [
+      "Cypress",
+      "JavaScript"
+    ],
+    "modalTags": [
+      "Cypress",
+      "JavaScript",
+      "Page Object Model"
+    ],
     "features": [
       "Full Page Object Model (POM) architecture for maximum maintainability",
       "Custom Cypress commands and reusable component utilities",
@@ -99,5 +140,29 @@
     "screenshotUrl": null,
     "priority": 5,
     "source": "manual"
+  },
+  {
+    "id": "modal-cypress_automation_core",
+    "title": "Cypress Automation Core",
+    "icon": "fas fa-vial",
+    "navLabel": "Cypress Automation Core",
+    "shortDescription": "This is a custom-built Cypress automation framework designed to facilitate UI testing. The framework is structured around Page Object Model (POM) principles for better scalability and maintainability. It is intended to be used with a sample web application, which can be tested using Docker or directly from the source repository.",
+    "fullDescription": "This is a custom-built Cypress automation framework designed to facilitate UI testing. The framework is structured around Page Object Model (POM) principles for better scalability and maintainability. It is intended to be used with a sample web application, which can be tested using Docker or directly from the source repository.",
+    "tags": [
+      "JavaScript"
+    ],
+    "modalTags": [
+      "JavaScript",
+      "portfolio-qa"
+    ],
+    "features": [
+      "Repository: https://github.com/crisemy/cypress-automation-core",
+      "Primary language: JavaScript",
+      "Last updated: 2026-03-24"
+    ],
+    "githubUrl": "https://github.com/crisemy/cypress-automation-core",
+    "screenshotUrl": null,
+    "priority": 99,
+    "source": "agent"
   }
 ]
