@@ -7,13 +7,13 @@ Personal portfolio website for **Cristian Nadj** — Senior QA Engineer & Test A
 
 ---
 
-## 🌐 Live Site
+## Live Site
 
 **[https://crisemy.github.io](https://crisemy.github.io)**
 
 ---
 
-## 🤖 Portfolio Automation Agent
+## Portfolio Automation Agent
 
 This repository includes a **Python-based automation agent** that runs on a scheduled cron job via GitHub Actions. Its goal is to keep the portfolio up to date automatically — without requiring any manual HTML edits.
 
@@ -49,7 +49,7 @@ To have a new GitHub repository appear automatically on the portfolio:
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 crisemy.github.io/
@@ -72,7 +72,7 @@ crisemy.github.io/
 
 ---
 
-## 🛠️ Local Development
+## Local Development
 
 The site uses vanilla HTML, CSS, and JavaScript — no build step required.
 
@@ -90,7 +90,7 @@ Then open **[http://localhost:8080](http://localhost:8080)** in your browser.
 
 ---
 
-## 🐍 Running the Agent Locally
+## Running the Agent Locally
 
 ```bash
 # Preview what the agent would do (no files changed)
@@ -108,7 +108,7 @@ python3 scripts/update_portfolio.py
 
 ---
 
-## 📋 `data/projects.json` Schema
+## `data/projects.json` Schema
 
 Each project in the JSON array follows this structure:
 
@@ -130,7 +130,7 @@ Each project in the JSON array follows this structure:
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
