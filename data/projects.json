@@ -75,7 +75,7 @@
       "Topics: portfolio-qa"
     ],
     "githubUrl": "https://github.com/crisemy/ai-test-generator",
-    "screenshotUrl": "./images/ai_test_generator_preview.png",
+    "screenshotUrl": "./assets/images/ai_test_generator_preview.svg",
     "priority": 2,
     "source": "manual",
     "repoLanguage": "Jupyter Notebook",

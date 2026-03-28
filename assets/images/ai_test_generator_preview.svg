@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00f2fe"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="24" fill="#0b1220"/>
+  <rect x="28" y="28" width="1144" height="574" rx="20" fill="url(#g)" fill-opacity="0.08" stroke="#0ea5e9" stroke-opacity="0.25" />
+  <text x="80" y="150" fill="#e2e8f0" font-size="56" font-family="Inter, sans-serif" font-weight="700">AI Test Generator</text>
+  <text x="80" y="210" fill="#67e8f9" font-size="24" font-family="Inter, sans-serif">Playwright · ML Risk Scoring · SHAP Explainability</text>
+  <rect x="80" y="260" width="480" height="280" rx="18" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.35"/>
+  <text x="110" y="310" fill="#e2e8f0" font-size="24" font-family="Inter, sans-serif" font-weight="700">Scenario Preview</text>
+  <text x="110" y="350" fill="#cbd5e1" font-size="18" font-family="Inter, sans-serif">User Story → Gherkin cases → Playwright scripts</text>
+  <text x="110" y="390" fill="#cbd5e1" font-size="18" font-family="Inter, sans-serif">Risk scored with Random Forest + SHAP waterfall</text>
+  <rect x="640" y="260" width="480" height="280" rx="18" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.35"/>
+  <text x="670" y="310" fill="#e2e8f0" font-size="24" font-family="Inter, sans-serif" font-weight="700">CI Snapshot</text>
+  <text x="670" y="350" fill="#cbd5e1" font-size="18" font-family="Inter, sans-serif">Includes GitHub Actions pipeline and artifacts</text>
+  <text x="670" y="390" fill="#cbd5e1" font-size="18" font-family="Inter, sans-serif">Ready-to-run Playwright POM framework</text>
+</svg>

@@ -13,7 +13,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind build (compiled locally) -->
+    <link rel="stylesheet" href="assets/css/tailwind-output.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -21,9 +23,9 @@
 <body>
     <div class="background-overlay"></div>
 
-    <nav class="navbar">
-        <div class="logo">
-            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <nav class="navbar flex items-center justify-between px-6 md:px-10 py-4 sticky top-0 bg-slate-950/70 backdrop-blur border-b border-white/10 z-[1000]">
+        <a href="#home" class="logo flex items-center gap-3 text-cyan-300 font-extrabold text-xl hover:text-cyan-200 transition">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                 class="logo-icon">
                 <path
                     d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
@@ -44,31 +46,31 @@
                 </defs>
             </svg>
             CN.
-        </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li class="nav-item-dropdown">
-                <a href="#portfolio">Portfolio <i class="fas fa-chevron-down nav-chevron"></i></a>
+        </a>
+        <ul class="nav-links hidden md:flex items-center gap-6 text-sm font-semibold text-slate-100">
+            <li><a class="hover:text-cyan-300 transition" href="#home">Home</a></li>
+            <li class="nav-item-dropdown relative">
+                <a class="hover:text-cyan-300 transition flex items-center gap-1" href="#portfolio">Portfolio <i class="fas fa-chevron-down nav-chevron"></i></a>
                 <ul class="nav-dropdown" id="nav-portfolio-dropdown">
                     <!-- Dynamically populated by script.js from data/projects.json -->
                 </ul>
             </li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Expertise</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a class="hover:text-cyan-300 transition" href="#about">About</a></li>
+            <li><a class="hover:text-cyan-300 transition" href="#services">Expertise</a></li>
+            <li><a class="hover:text-cyan-300 transition" href="#experience">Experience</a></li>
         </ul>
-        <a href="#contact" class="btn-primary-small">Contact Me</a>
+        <a href="#contact" class="btn-primary-small ml-4 hidden md:inline-flex">Contact Me</a>
     </nav>
 
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero section-spacing">
-            <div class="hero-content reveal">
-                <p class="subtitle">Senior QA Engineer & Test Architect</p>
-                <h1 class="glitch-text">Engineering <span class="gradient-text">Quality</span> at Scale</h1>
-                <p class="hero-description">20+ years building comprehensive automation frameworks, driving CI/CD
+            <div class="hero-content reveal text-center max-w-4xl mx-auto px-4">
+                <p class="subtitle uppercase tracking-[0.25em] text-cyan-300 font-semibold">Senior QA Engineer & Test Architect</p>
+                <h1 class="glitch-text text-4xl md:text-5xl font-extrabold mt-3 leading-tight">Engineering <span class="gradient-text">Quality</span> at Scale</h1>
+                <p class="hero-description text-slate-300 text-lg mt-4 mb-8">20+ years building comprehensive automation frameworks, driving CI/CD
                     orchestration, and pioneering AI-assisted software testing.</p>
-                <div class="hero-buttons">
+                <div class="hero-buttons flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="#services" class="btn-primary">Explore Services</a>
                     <a href="https://github.com/crisemy" target="_blank" class="btn-secondary"><i
                             class="fab fa-github"></i> GitHub Profile</a>
@@ -76,12 +78,13 @@
             </div>
         </section>
 
+
         <!-- Portfolio Section -->
         <section id="portfolio" class="portfolio section-spacing">
             <h2 class="section-title reveal">Featured Open-Source</h2>
             <p class="section-subtitle reveal">Showcasing experiments in AI, Test Architecture and Data Science</p>
             <!-- Cards dynamically rendered by script.js from data/projects.json -->
-            <div class="portfolio-grid" id="portfolio-grid-container"></div>
+            <div class="portfolio-grid grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="portfolio-grid-container"></div>
             <div class="center-btn reveal">
                 <a href="https://github.com/crisemy" target="_blank" class="btn-secondary">View More on GitHub</a>
             </div>
@@ -89,48 +92,48 @@
 
         <!-- About Section -->
         <section id="about" class="about section-spacing">
-            <h2 class="section-title reveal">Profile Summary</h2>
-            <div class="about-card glass-panel reveal">
-                <p>I specialize in test architecture design, quality observability, and AI-assisted testing approaches.
+            <h2 class="section-title reveal text-center text-3xl md:text-4xl font-extrabold mb-6">Profile Summary</h2>
+            <div class="about-card glass-panel reveal max-w-4xl mx-auto px-6 py-8 bg-slate-900/70 border border-white/10 rounded-2xl shadow-xl">
+                <p class="text-slate-300 text-lg mb-4">I specialize in test architecture design, quality observability, and AI-assisted testing approaches.
                     Combining a deep understanding of standard practices with data-driven workflows, I strive to
                     optimize regression scope, reduce defect leakage, and secure release predictability.</p>
-                <p>Equipped with hands-on expertise in <strong>Python, JavaScript, SQL,</strong> and CI/CD pipelines,
+                <p class="text-slate-200 text-lg mb-6">Equipped with hands-on expertise in <strong>Python, JavaScript, SQL,</strong> and CI/CD pipelines,
                     and currently pursuing a Master’s Degree in Data Science & AI. I am dedicated to bridging the gap
                     between rigorous quality control and modern machine learning techniques.</p>
-                <ul class="contact-links">
-                    <li><i class="fas fa-envelope"></i> crisemy@gmail.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina (Global/Remote)</li>
+                <ul class="contact-links flex flex-col sm:flex-row sm:justify-center sm:gap-10 text-slate-200">
+                    <li class="flex items-center gap-2"><i class="fas fa-envelope text-cyan-300"></i> crisemy@gmail.com</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-cyan-300"></i> Buenos Aires, Argentina (Global/Remote)</li>
                 </ul>
             </div>
         </section>
 
         <!-- Services Section -->
         <section id="services" class="services section-spacing">
-            <h2 class="section-title reveal">Core Expertise</h2>
-            <div class="services-grid">
+            <h2 class="section-title reveal text-center text-3xl md:text-4xl font-extrabold mb-6">Core Expertise</h2>
+            <div class="services-grid grid gap-6 md:grid-cols-2 lg:grid-cols-4 px-2">
 
-                <div class="service-card glass-panel reveal">
+                <div class="service-card glass-panel reveal bg-slate-900/70 border border-white/10 rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br hover:from-slate-900/80 hover:via-slate-900/80 hover:to-cyan-900/50 hover:border-cyan-300/60 hover:shadow-cyan-400/20 transition duration-200">
                     <div class="icon-wrapper"><i class="fas fa-project-diagram"></i></div>
                     <h3>Test Architecture & Frameworks</h3>
                     <p>Designing and building scalable, maintainable automation frameworks using tools like Cypress,
                         Playwright, and Selenium to suit enterprise business risks.</p>
                 </div>
 
-                <div class="service-card glass-panel reveal">
+                <div class="service-card glass-panel reveal bg-slate-900/70 border border-white/10 rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br hover:from-slate-900/80 hover:via-slate-900/80 hover:to-cyan-900/50 hover:border-cyan-300/60 hover:shadow-cyan-400/20 transition duration-200">
                     <div class="icon-wrapper"><i class="fas fa-robot"></i></div>
                     <h3>AI-Assisted Testing Strategies</h3>
                     <p>Implementing ML-based defect analytics, predictive risk modeling, and GenAI code generation to
                         increase test coverage and efficiency.</p>
                 </div>
 
-                <div class="service-card glass-panel reveal">
+                <div class="service-card glass-panel reveal bg-slate-900/70 border border-white/10 rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br hover:from-slate-900/80 hover:via-slate-900/80 hover:to-cyan-900/50 hover:border-cyan-300/60 hover:shadow-cyan-400/20 transition duration-200">
                     <div class="icon-wrapper"><i class="fas fa-sync-alt"></i></div>
                     <h3>CI/CD Integration</h3>
                     <p>Seamlessly embedding robust testing pipelines into Jenkins and GitHub Actions directly integrated
                         into your DevOps ecosystem.</p>
                 </div>
 
-                <div class="service-card glass-panel reveal">
+                <div class="service-card glass-panel reveal bg-slate-900/70 border border-white/10 rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br hover:from-slate-900/80 hover:via-slate-900/80 hover:to-cyan-900/50 hover:border-cyan-300/60 hover:shadow-cyan-400/20 transition duration-200">
                     <div class="icon-wrapper"><i class="fas fa-chart-line"></i></div>
                     <h3>Data-Driven Quality</h3>
                     <p>Creating robust quality observability tracking platforms using Python/Pandas to analyze defect
@@ -141,13 +144,13 @@
 
         <!-- Experience Section -->
         <section id="experience" class="experience section-spacing">
-            <h2 class="section-title reveal">Professional Timeline</h2>
-            <div class="timeline">
+            <h2 class="section-title reveal text-center text-3xl md:text-4xl font-extrabold mb-6">Professional Timeline</h2>
+            <div class="timeline max-w-4xl mx-auto">
 
                 <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-panel">
-                        <span class="date">2015 – Present</span>
+                    <div class="timeline-content glass-panel bg-slate-900/70 border border-white/10 rounded-xl">
+                        <span class="date text-cyan-300">2015 – Present</span>
                         <h3>Senior QA Engineering Consultant</h3>
                         <p class="company">Independent Contractor (Global)</p>
                         <p>Provided QA leadership, architecture design, and automation strategy for international
@@ -158,8 +161,8 @@
 
                 <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-panel">
-                        <span class="date">2010 – 2015</span>
+                    <div class="timeline-content glass-panel bg-slate-900/70 border border-white/10 rounded-xl">
+                        <span class="date text-cyan-300">2010 – 2015</span>
                         <h3>Project Director (QA-Focused)</h3>
                         <p class="company">BimIT SRL</p>
                         <p>Led cross-functional engineering teams across 30+ software projects, instituting agile
@@ -169,8 +172,8 @@
 
                 <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-panel">
-                        <span class="date">2008 – 2010</span>
+                    <div class="timeline-content glass-panel bg-slate-900/70 border border-white/10 rounded-xl">
+                        <span class="date text-cyan-300">2008 – 2010</span>
                         <h3>QA Technical Lead</h3>
                         <p class="company">Global Telecommunications Company</p>
                         <p>Directed a team of 8 engineers handling automation with Selenium and Python while executing
@@ -190,21 +193,21 @@
 
 
     <!-- Footer -->
-    <footer id="contact" class="glass-panel">
-        <div class="footer-content">
-            <p class="footer-mission reveal">Empowering organizations to scale quality engineering through <br> comprehensive automation audits, AI-driven testing, <br> and robust architectural design.</p>
-            <h2 class="reveal">Ready to enhance your platform's quality?</h2>
-            <div class="social-links reveal">
-                <a href="mailto:crisemy@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/cristian-gn/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/crisemy" target="_blank"><i class="fab fa-github"></i></a>
+    <footer id="contact" class="glass-panel bg-slate-950/80 border-t border-white/10">
+        <div class="footer-content max-w-5xl mx-auto px-6 py-10 text-center">
+            <p class="footer-mission reveal text-xl md:text-2xl text-slate-100 mb-6">Empowering organizations to scale quality engineering through <br> comprehensive automation audits, AI-driven testing, <br> and robust architectural design.</p>
+            <h2 class="reveal text-3xl font-extrabold text-white mb-6">Ready to enhance your platform's quality?</h2>
+            <div class="social-links reveal flex justify-center gap-6 text-2xl text-slate-100 mb-6">
+                <a href="mailto:crisemy@gmail.com" class="hover:text-cyan-300 transition"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/cristian-gn/" target="_blank" class="hover:text-cyan-300 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/crisemy" target="_blank" class="hover:text-cyan-300 transition"><i class="fab fa-github"></i></a>
             </div>
-            <p class="portfolio-sync">Portfolio sync: 2026-03-28T02:08:57Z | 5 tracked repos | 0 new | 5 updated</p>
-            <p class="copyright">&copy; 2026 Cristian Nadj. All Rights Reserved.</p>
+            <p class="portfolio-sync text-slate-200">Portfolio sync: pending first automated run.</p>
+            <p class="copyright text-slate-500">&copy; 2026 Cristian Nadj. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
