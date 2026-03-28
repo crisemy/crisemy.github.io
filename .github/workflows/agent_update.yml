@@ -54,10 +54,10 @@ jobs:
             python scripts/update_portfolio.py
           fi
 
-      - name: 🔍 Check for changes in projects.json
+      - name: 🔍 Check for portfolio file changes
         id: check_changes
         run: |
-          if git diff --quiet data/projects.json; then
+          if git diff --quiet -- data/projects.json index.html; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
             echo "changed=true" >> $GITHUB_OUTPUT
@@ -68,11 +68,11 @@ jobs:
         run: |
           git config user.name  "Portfolio Agent [bot]"
           git config user.email "portfolio-agent@github.com"
-          git add data/projects.json
+          git add data/projects.json index.html
           git commit -m "chore(agent): automated portfolio sync $(date -u '+%Y-%m-%d')"
           git push origin HEAD
           echo "✅ Portfolio updated and pushed to GitHub Pages."
 
       - name: ℹ️ Nothing to update
         if: steps.check_changes.outputs.changed == 'false'
-        run: echo "✅ No new projects found. Portfolio is already up to date."
+        run: echo "✅ No portfolio file changes were detected."
