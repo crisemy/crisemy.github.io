@@ -21,6 +21,7 @@ import os
 import argparse
 import urllib.request
 import urllib.error
+import re
 from datetime import datetime, timezone
 
 # ---------------------------------------------------------------------------
@@ -37,6 +38,7 @@ PORTFOLIO_TOPICS = {"portfolio-qa", "portfolio", "showcase"}
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
 PROJECTS_JSON_PATH = os.path.join(PROJECT_ROOT, "data", "projects.json")
+INDEX_HTML_PATH = os.path.join(PROJECT_ROOT, "index.html")
 
 # Icon mapping based on recognized keywords in the repo name / description.
 # The agent will assign the first matching icon when auto-generating a new card.
@@ -52,6 +54,13 @@ ICON_MAP = [
     ({"mobile", "appium", "ios", "android"}, "fas fa-mobile-alt"),
 ]
 DEFAULT_ICON = "fas fa-robot"
+SYNC_LINE_RE = re.compile(r'(<p class="portfolio-sync">)(.*?)(</p>)')
+SYNCED_FEATURE_PREFIXES = (
+    "Repository:",
+    "Primary language:",
+    "Last updated:",
+    "Topics:",
+)
 
 # ---------------------------------------------------------------------------
 
@@ -146,6 +155,30 @@ def generate_tags_from_languages(repo: dict) -> list[str]:
     return tags if tags else ["QA", "Automation"]
 
 
+def unique_preserving_order(items: list[str]) -> list[str]:
+    """Removes duplicates while keeping the original order."""
+    seen = set()
+    unique_items = []
+    for item in items:
+        if not item or item in seen:
+            continue
+        seen.add(item)
+        unique_items.append(item)
+    return unique_items
+
+
+def build_synced_features(repo: dict, topics: list[str]) -> list[str]:
+    """Builds the machine-managed feature lines for a repository."""
+    updated_at = (repo.get("updated_at") or "N/A")[:10]
+    topic_text = ", ".join(topics) if topics else "none"
+    return [
+        f"Repository: {repo['html_url']}",
+        f"Primary language: {repo.get('language', 'N/A')}",
+        f"Last updated: {updated_at}",
+        f"Topics: {topic_text}",
+    ]
+
+
 def build_new_project_entry(repo: dict, topics: list[str]) -> dict:
     """
     Constructs a new project dictionary from a raw GitHub repo object.
@@ -166,16 +199,57 @@ def build_new_project_entry(repo: dict, topics: list[str]) -> dict:
         "fullDescription": description,
         "tags": tags,
         "modalTags": tags + (topics if topics else []),
-        "features": [
-            f"Repository: {repo['html_url']}",
-            f"Primary language: {repo.get('language', 'N/A')}",
-            f"Last updated: {repo.get('updated_at', 'N/A')[:10]}",
-        ],
+        "features": build_synced_features(repo, topics),
         "githubUrl": repo["html_url"],
         "screenshotUrl": None,
         "priority": 99,    # Auto-discovered repos go to the end. You can re-order manually.
         "source": "agent", # Flag to distinguish auto-generated vs manually curated entries
     }
+
+
+def sync_existing_project(existing: dict, repo: dict, topics: list[str], synced_at: str) -> tuple[dict, bool]:
+    """
+    Refreshes an existing project with the latest GitHub metadata.
+    Manual entries keep curated copy, while agent-generated entries are fully refreshed.
+    """
+    generated = build_new_project_entry(repo, topics)
+    updated = dict(existing)
+
+    updated["githubUrl"] = repo["html_url"]
+    updated["repoLanguage"] = repo.get("language")
+    updated["repoTopics"] = topics
+    updated["repoUpdatedAt"] = repo.get("updated_at")
+    updated["lastSyncedAt"] = synced_at
+
+    if existing.get("source") == "agent":
+        for field in (
+            "id",
+            "title",
+            "icon",
+            "navLabel",
+            "shortDescription",
+            "fullDescription",
+            "tags",
+            "modalTags",
+            "features",
+            "githubUrl",
+        ):
+            updated[field] = generated[field]
+        if not updated.get("screenshotUrl"):
+            updated["screenshotUrl"] = generated["screenshotUrl"]
+    else:
+        updated["tags"] = unique_preserving_order(existing.get("tags", []) + generated["tags"])
+        updated["modalTags"] = unique_preserving_order(
+            existing.get("modalTags", []) + generated["tags"] + topics
+        )
+        manual_features = [
+            feature
+            for feature in existing.get("features", [])
+            if not feature.startswith(SYNCED_FEATURE_PREFIXES)
+        ]
+        updated["features"] = manual_features + build_synced_features(repo, topics)
+
+    return updated, updated != existing
 
 
 def load_projects(path: str) -> list[dict]:
@@ -195,11 +269,25 @@ def save_projects(path: str, projects: list[dict]) -> None:
         f.write("\n")  # trailing newline — good Git etiquette
 
 
+def update_index_sync_status(path: str, sync_message: str) -> None:
+    """Updates the visible sync status line in index.html."""
+    with open(path, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    updated_html, replacements = SYNC_LINE_RE.subn(rf"\1{sync_message}\3", html, count=1)
+    if replacements != 1:
+        raise ValueError("Could not find portfolio sync placeholder in index.html")
+
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(updated_html)
+
+
 def run(dry_run: bool = False) -> None:
     """Main agent execution logic."""
     log("=" * 60)
     log(f"Portfolio Agent starting. DRY RUN: {dry_run}")
     log("=" * 60)
+    synced_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
     # 1. Fetch all repositories from GitHub
     all_repos = fetch_github_repos(GITHUB_USERNAME)
@@ -224,35 +312,74 @@ def run(dry_run: bool = False) -> None:
 
     # 3. Load the existing projects.json
     existing_projects = load_projects(PROJECTS_JSON_PATH)
-    existing_github_urls = {p["githubUrl"] for p in existing_projects}
+    existing_projects_by_url = {p["githubUrl"]: p for p in existing_projects}
     log(f"Existing projects in JSON: {len(existing_projects)}")
 
-    # 4. Detect NEW repositories that are not yet in the JSON
+    # 4. Detect NEW repositories and refresh existing entries
     new_projects = []
+    refreshed_projects = []
+    updated_projects = []
     for repo in matching_repos:
-        if repo["html_url"] not in existing_github_urls:
+        existing = existing_projects_by_url.get(repo["html_url"])
+        if existing is None:
             log(f"  ★ NEW PROJECT detected: {repo['name']}")
             entry = build_new_project_entry(repo, repo.get("_fetched_topics", []))
+            entry["repoLanguage"] = repo.get("language")
+            entry["repoTopics"] = repo.get("_fetched_topics", [])
+            entry["repoUpdatedAt"] = repo.get("updated_at")
+            entry["lastSyncedAt"] = synced_at
             new_projects.append(entry)
+            refreshed_projects.append(entry)
+        else:
+            refreshed_entry, changed = sync_existing_project(
+                existing,
+                repo,
+                repo.get("_fetched_topics", []),
+                synced_at,
+            )
+            refreshed_projects.append(refreshed_entry)
+            if changed:
+                updated_projects.append(refreshed_entry)
+                log(f"  ↻ UPDATED PROJECT detected: {repo['name']}")
 
-    if not new_projects:
-        log("No new projects discovered. Portfolio JSON is up to date!")
-    else:
+    missing_projects = [
+        project for project in existing_projects
+        if project["githubUrl"] not in {repo["html_url"] for repo in matching_repos}
+    ]
+    refreshed_projects.extend(missing_projects)
+
+    if new_projects:
         log(f"{len(new_projects)} new project(s) will be added:")
         for p in new_projects:
             log(f"   → {p['title']} ({p['githubUrl']})")
 
-    # 5. Merge and save
-    if new_projects and not dry_run:
-        updated = existing_projects + new_projects
-        # Sort by priority (manual projects first, then auto-discovered by update date)
-        updated.sort(key=lambda p: p.get("priority", 99))
-        save_projects(PROJECTS_JSON_PATH, updated)
-        log(f"SUCCESS: projects.json updated with {len(new_projects)} new project(s).")
-    elif dry_run and new_projects:
-        log("DRY RUN: No changes written to disk.")
+    if updated_projects:
+        log(f"{len(updated_projects)} existing project(s) will be refreshed.")
+    elif not new_projects:
+        log("No new repositories discovered, but existing entries were checked for updates.")
+
+    # 5. Merge, sort, and save
+    refreshed_projects.sort(key=lambda p: (p.get("priority", 99), p.get("title", "")))
+    sync_message = (
+        f"Portfolio sync: {synced_at} | "
+        f"{len(matching_repos)} tracked repos | "
+        f"{len(new_projects)} new | "
+        f"{len(updated_projects)} updated"
+    )
+
+    has_changes = bool(new_projects or updated_projects)
+
+    if not dry_run and has_changes:
+        save_projects(PROJECTS_JSON_PATH, refreshed_projects)
+        update_index_sync_status(INDEX_HTML_PATH, sync_message)
+        log(
+            "SUCCESS: Portfolio files updated "
+            f"({len(new_projects)} new, {len(updated_projects)} refreshed)."
+        )
+    elif dry_run and has_changes:
+        log("DRY RUN: Changes detected, but nothing was written to disk.")
     else:
-        log("Nothing to write.")
+        log("No portfolio content changes detected. Nothing to write.")
 
     log("Agent finished.")
 

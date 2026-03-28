@@ -467,6 +467,12 @@ footer p {
     transform: translateY(-5px);
 }
 
+.portfolio-sync {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: rgba(248, 250, 252, 0.82);
+}
+
 .copyright {
     font-size: 0.85rem;
     color: rgba(148, 163, 184, 0.5);

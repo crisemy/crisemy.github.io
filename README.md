@@ -76,11 +76,15 @@ crisemy.github.io/
 
 The site uses vanilla HTML, CSS, and JavaScript — no build step required.
 
-Because `script.js` uses `fetch()` to load `data/projects.json`, you **must** serve the project through a local HTTP server (browsers block `fetch()` on `file://` URLs).
+Because `script.js` uses `fetch()` to load `data/projects.json`, serve the project through a local HTTP server.
 
 ```bash
-# Option 1 — Python (built-in, no install needed)
+# Option 1
 python3 -m http.server 8080
+
+# If port 8080 is already in use, try another one
+python3 -m http.server 8081
+python3 -m http.server 9000
 
 # Option 2 — Node.js
 npx serve .
@@ -146,7 +150,7 @@ Each project in the JSON array follows this structure:
 
 ## 📄 License
 
-This project is open source. Feel free to fork and adapt the automation agent pattern for your own portfolio.
+This project is open source. MIT License.
 
 ---
 

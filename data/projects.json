@@ -9,25 +9,37 @@
     "tags": [
       "Promptfoo",
       "DeepEval",
-      "LLMs"
+      "LLMs",
+      "Python"
     ],
     "modalTags": [
       "Promptfoo",
       "DeepEval",
       "Python",
       "Streamlit",
-      "LangChain"
+      "LangChain",
+      "portfolio-qa"
     ],
     "features": [
       "Prompt Regression Testing with Promptfoo to evaluate matrices and assert LLM guardrails",
       "Autonomous Agent logic evaluation via DeepEval on LangChain components",
       "Cost-free evaluation wrappers using Groq (Llama 3) for metrics",
-      "Offline, interactive analytics Streamlit Dashboard built with Plotly"
+      "Offline, interactive analytics Streamlit Dashboard built with Plotly",
+      "Repository: https://github.com/crisemy/ai-testing-prompts-agents",
+      "Primary language: Python",
+      "Last updated: 2026-03-24",
+      "Topics: portfolio-qa"
     ],
     "githubUrl": "https://github.com/crisemy/ai-testing-prompts-agents",
     "screenshotUrl": null,
     "priority": 1,
-    "source": "manual"
+    "source": "manual",
+    "repoLanguage": "Python",
+    "repoTopics": [
+      "portfolio-qa"
+    ],
+    "repoUpdatedAt": "2026-03-24T10:11:58Z",
+    "lastSyncedAt": "2026-03-28T02:08:57Z"
   },
   {
     "id": "modal-ai-test",
@@ -39,26 +51,39 @@
     "tags": [
       "Playwright",
       "AI/GenAI",
-      "SHAP"
+      "SHAP",
+      "Jupyter Notebook"
     ],
     "modalTags": [
       "Streamlit",
       "Groq LLM",
       "scikit-learn",
       "SHAP",
-      "Playwright"
+      "Playwright",
+      "Jupyter Notebook",
+      "portfolio-qa"
     ],
     "features": [
       "Generates 10–15 Gherkin-style test cases per User Story via Llama 3.3 70B",
       "ML Risk Scoring with Random Forest — predicts High / Medium / Low defect likelihood",
       "SHAP Waterfall Plots — full model explainability per test case",
       "Batch CSV backlog upload — prioritize thousands of stories without API calls",
-      "Downloads a ready-to-run Playwright POM Framework + GitHub Actions CI pipeline"
+      "Downloads a ready-to-run Playwright POM Framework + GitHub Actions CI pipeline",
+      "Repository: https://github.com/crisemy/ai-test-generator",
+      "Primary language: Jupyter Notebook",
+      "Last updated: 2026-03-27",
+      "Topics: portfolio-qa"
     ],
     "githubUrl": "https://github.com/crisemy/ai-test-generator",
     "screenshotUrl": "./images/ai_test_generator_preview.png",
     "priority": 2,
-    "source": "manual"
+    "source": "manual",
+    "repoLanguage": "Jupyter Notebook",
+    "repoTopics": [
+      "portfolio-qa"
+    ],
+    "repoUpdatedAt": "2026-03-27T23:29:41Z",
+    "lastSyncedAt": "2026-03-28T02:08:57Z"
   },
   {
     "id": "modal-ai-pipeline",
@@ -69,23 +94,36 @@
     "fullDescription": "An intelligent regression testing pipeline that merges traditional QA automation with data-driven insights to reduce test cycle times and increase release confidence.",
     "tags": [
       "CI/CD",
-      "Python"
+      "Python",
+      "Jupyter Notebook"
     ],
     "modalTags": [
       "CI/CD",
       "Python",
-      "GitHub Actions"
+      "GitHub Actions",
+      "Jupyter Notebook",
+      "portfolio-qa"
     ],
     "features": [
       "Automated regression suite triggered on every push via GitHub Actions",
       "Data-driven test selection — only runs tests relevant to changed modules",
       "Integrates with Jira / ticketing systems for defect traceability",
-      "Publishes test result dashboards after every pipeline run"
+      "Publishes test result dashboards after every pipeline run",
+      "Repository: https://github.com/crisemy/ai-qa-pipeline",
+      "Primary language: Jupyter Notebook",
+      "Last updated: 2026-03-24",
+      "Topics: portfolio-qa"
     ],
     "githubUrl": "https://github.com/crisemy/ai-qa-pipeline",
     "screenshotUrl": null,
     "priority": 3,
-    "source": "manual"
+    "source": "manual",
+    "repoLanguage": "Jupyter Notebook",
+    "repoTopics": [
+      "portfolio-qa"
+    ],
+    "repoUpdatedAt": "2026-03-24T10:14:03Z",
+    "lastSyncedAt": "2026-03-28T02:08:57Z"
   },
   {
     "id": "modal-qa-lab",
@@ -96,23 +134,36 @@
     "fullDescription": "A resilience testing and experimentation platform combining chaos engineering with traditional QA automation and interactive data analysis dashboards for deep quality observability.",
     "tags": [
       "Data Integration",
-      "Resilience"
+      "Resilience",
+      "Jupyter Notebook"
     ],
     "modalTags": [
       "Data Integration",
       "Chaos Engineering",
-      "Python"
+      "Python",
+      "Jupyter Notebook",
+      "portfolio-qa"
     ],
     "features": [
       "Chaos Engineering experiments to validate system resilience under fault conditions",
       "Interactive dashboards tracking defect density, coverage and release health",
       "Modular test harness integrating multiple QA automation tools",
-      "Reporting engine exportable to CSV / PDF stakeholder formats"
+      "Reporting engine exportable to CSV / PDF stakeholder formats",
+      "Repository: https://github.com/crisemy/qa-intelligence-lab",
+      "Primary language: Jupyter Notebook",
+      "Last updated: 2026-03-25",
+      "Topics: portfolio-qa"
     ],
     "githubUrl": "https://github.com/crisemy/qa-intelligence-lab",
     "screenshotUrl": null,
     "priority": 4,
-    "source": "manual"
+    "source": "manual",
+    "repoLanguage": "Jupyter Notebook",
+    "repoTopics": [
+      "portfolio-qa"
+    ],
+    "repoUpdatedAt": "2026-03-25T15:18:53Z",
+    "lastSyncedAt": "2026-03-28T02:08:57Z"
   },
   {
     "id": "modal-cypress",
@@ -158,11 +209,18 @@
     "features": [
       "Repository: https://github.com/crisemy/cypress-automation-core",
       "Primary language: JavaScript",
-      "Last updated: 2026-03-24"
+      "Last updated: 2026-03-24",
+      "Topics: portfolio-qa"
     ],
     "githubUrl": "https://github.com/crisemy/cypress-automation-core",
     "screenshotUrl": null,
     "priority": 99,
-    "source": "agent"
+    "source": "agent",
+    "repoLanguage": "JavaScript",
+    "repoTopics": [
+      "portfolio-qa"
+    ],
+    "repoUpdatedAt": "2026-03-24T10:11:17Z",
+    "lastSyncedAt": "2026-03-28T02:08:57Z"
   }
 ]
