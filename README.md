@@ -38,6 +38,7 @@ You can trigger a run at any time from the **Actions** tab on GitHub:
 2. Click **"Run workflow"**
 3. Optionally enable **Dry Run** to preview changes without writing anything
 
+![Github Deployment](./images/github-deployment.png)
 ### Adding a New Project to the Portfolio
 
 To have a new GitHub repository appear automatically on the portfolio:
