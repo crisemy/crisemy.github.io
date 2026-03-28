@@ -94,6 +94,32 @@ Then open **[http://localhost:8080](http://localhost:8080)** in your browser.
 
 ---
 
+## Tailwind CSS (local build with purge)
+
+Tailwind is compiled locally with purge to keep CSS small.
+
+```bash
+# Install once
+npm install
+
+# Build minified CSS (tailwind-output.css)
+npm run build:css
+
+# Watch during edits
+npm run dev:css
+```
+
+The generated file `tailwind-output.css` is referenced in `index.html`.
+
+### What changed with Tailwind
+- Navbar, hero, featured cards, about, services, timeline, and footer migrated to Tailwind utilities for responsive spacing and hover states.
+- Cards now have gradient hover accents and a clearer grid layout on desktop (2–3 columns).
+- Custom CSS was pruned; only brand/glass tokens remain in `assets/css/style.css`.
+- Local build purges unused classes, keeping `tailwind-output.css` (~11 KB).
+- Assets re-organized under `assets/` (css/js/images) for a cleaner root.
+
+---
+
 ## Running the Agent Locally
 
 ```bash

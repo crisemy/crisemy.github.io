@@ -1,0 +1,12 @@
+{
+  "name": "crisemy-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:css": "npx tailwindcss -c ./config/tailwind.config.js -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind-output.css --minify",
+    "dev:css": "npx tailwindcss -c ./config/tailwind.config.js -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind-output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}

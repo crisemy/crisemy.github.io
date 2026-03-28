@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keep brand gradients and glass tokens available if needed in custom classes */
+:root {
+  --primary-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+}
