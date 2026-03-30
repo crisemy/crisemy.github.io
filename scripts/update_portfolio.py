@@ -279,9 +279,21 @@ def update_index_sync_status(path: str, sync_message: str) -> None:
     with open(path, "r", encoding="utf-8") as f:
         html = f.read()
 
+    # Primary path: replace existing sync line.
     updated_html, replacements = SYNC_LINE_RE.subn(rf"\1{sync_message}\3", html, count=1)
+
     if replacements != 1:
-        raise ValueError("Could not find portfolio sync placeholder in index.html")
+        # Fallback: if the placeholder is missing (class renamed/removed), inject
+        # a sync line just before the closing </footer> so the agent never fails.
+        fallback_line = f'<p class="portfolio-sync text-slate-200">{sync_message}</p>'
+        footer_close = "</footer>"
+        if footer_close in html:
+            updated_html = html.replace(footer_close, f"    {fallback_line}\n    {footer_close}", 1)
+            replacements = 1
+        else:
+            # Last resort: append to end of file.
+            updated_html = html + "\n" + fallback_line + "\n"
+            replacements = 1
 
     with open(path, "w", encoding="utf-8") as f:
         f.write(updated_html)
