@@ -54,7 +54,8 @@ ICON_MAP = [
     ({"mobile", "appium", "ios", "android"}, "fas fa-mobile-alt"),
 ]
 DEFAULT_ICON = "fas fa-robot"
-SYNC_LINE_RE = re.compile(r'(<p class="portfolio-sync">)(.*?)(</p>)')
+# Match the sync line even if additional classes are added to the tag
+SYNC_LINE_RE = re.compile(r'(<p class="[^"]*portfolio-sync[^"]*">)(.*?)(</p>)')
 SYNCED_FEATURE_PREFIXES = (
     "Repository:",
     "Primary language:",
