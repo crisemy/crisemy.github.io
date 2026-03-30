@@ -55,8 +55,10 @@ ICON_MAP = [
 ]
 DEFAULT_ICON = "fas fa-robot"
 # Match the sync line even if class order/quotes/extra attributes vary
+# Very permissive: any <p> tag whose attributes contain "portfolio-sync" (case-insensitive)
 SYNC_LINE_RE = re.compile(
-    r'(<p[^>]*class=[\"\\\'][^\"\\\']*portfolio-sync[^\"\\\']*[\"\\\'][^>]*>)(.*?)(</p>)'
+    r'(<p[^>]*portfolio-sync[^>]*>)(.*?)(</p>)',
+    flags=re.IGNORECASE | re.DOTALL,
 )
 SYNCED_FEATURE_PREFIXES = (
     "Repository:",
