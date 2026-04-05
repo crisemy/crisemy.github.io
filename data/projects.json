@@ -39,7 +39,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:11:58Z",
-    "lastSyncedAt": "2026-03-28T02:08:57Z"
+    "lastSyncedAt": "2026-04-05T05:04:51Z"
   },
   {
     "id": "modal-ai-test",
@@ -52,7 +52,8 @@
       "Playwright",
       "AI/GenAI",
       "SHAP",
-      "Jupyter Notebook"
+      "Jupyter Notebook",
+      "Python"
     ],
     "modalTags": [
       "Streamlit",
@@ -61,7 +62,8 @@
       "SHAP",
       "Playwright",
       "Jupyter Notebook",
-      "portfolio-qa"
+      "portfolio-qa",
+      "Python"
     ],
     "features": [
       "Generates 10–15 Gherkin-style test cases per User Story via Llama 3.3 70B",
@@ -70,20 +72,20 @@
       "Batch CSV backlog upload — prioritize thousands of stories without API calls",
       "Downloads a ready-to-run Playwright POM Framework + GitHub Actions CI pipeline",
       "Repository: https://github.com/crisemy/ai-test-generator",
-      "Primary language: Jupyter Notebook",
-      "Last updated: 2026-03-27",
+      "Primary language: Python",
+      "Last updated: 2026-04-04",
       "Topics: portfolio-qa"
     ],
     "githubUrl": "https://github.com/crisemy/ai-test-generator",
     "screenshotUrl": "./assets/images/ai_test_generator_preview.svg",
     "priority": 2,
     "source": "manual",
-    "repoLanguage": "Jupyter Notebook",
+    "repoLanguage": "Python",
     "repoTopics": [
       "portfolio-qa"
     ],
-    "repoUpdatedAt": "2026-03-27T23:29:41Z",
-    "lastSyncedAt": "2026-03-28T02:08:57Z"
+    "repoUpdatedAt": "2026-04-04T23:18:54Z",
+    "lastSyncedAt": "2026-04-05T05:04:51Z"
   },
   {
     "id": "modal-ai-pipeline",
@@ -123,7 +125,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:14:03Z",
-    "lastSyncedAt": "2026-03-28T02:08:57Z"
+    "lastSyncedAt": "2026-04-05T05:04:51Z"
   },
   {
     "id": "modal-qa-lab",
@@ -163,7 +165,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-25T15:18:53Z",
-    "lastSyncedAt": "2026-03-28T02:08:57Z"
+    "lastSyncedAt": "2026-04-05T05:04:51Z"
   },
   {
     "id": "modal-cypress",
@@ -191,6 +193,37 @@
     "screenshotUrl": null,
     "priority": 5,
     "source": "manual"
+  },
+  {
+    "id": "modal-agentic_playwright",
+    "title": "Agentic Playwright",
+    "icon": "fas fa-check-double",
+    "navLabel": "Agentic Playwright",
+    "shortDescription": "AgenticPlaywright — AI-Powered Multi-Agent Test Automation Framework with Playwright, Grok & CrewAI. AgenticPlaywright as a practical experiment in modern test automation.",
+    "fullDescription": "AgenticPlaywright — AI-Powered Multi-Agent Test Automation Framework with Playwright, Grok & CrewAI. AgenticPlaywright as a practical experiment in modern test automation.",
+    "tags": [
+      "Python"
+    ],
+    "modalTags": [
+      "Python",
+      "portfolio-qa"
+    ],
+    "features": [
+      "Repository: https://github.com/crisemy/agentic-playwright",
+      "Primary language: Python",
+      "Last updated: 2026-04-02",
+      "Topics: portfolio-qa"
+    ],
+    "githubUrl": "https://github.com/crisemy/agentic-playwright",
+    "screenshotUrl": null,
+    "priority": 99,
+    "source": "agent",
+    "repoLanguage": "Python",
+    "repoTopics": [
+      "portfolio-qa"
+    ],
+    "repoUpdatedAt": "2026-04-02T18:58:30Z",
+    "lastSyncedAt": "2026-04-05T05:04:51Z"
   },
   {
     "id": "modal-cypress_automation_core",
@@ -221,6 +254,6 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:11:17Z",
-    "lastSyncedAt": "2026-03-28T02:08:57Z"
+    "lastSyncedAt": "2026-04-05T05:04:51Z"
   }
 ]
