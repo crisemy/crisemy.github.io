@@ -5,13 +5,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.padding = '1rem 5%';
-            navbar.style.background = 'rgba(5, 8, 14, 0.9)';
-            navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
+            navbar.style.padding = '0.8rem 5%';
+            navbar.style.background = 'var(--navbar-scrolled)';
+            navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.2)';
         } else {
-            navbar.style.padding = '1.5rem 5%';
-            navbar.style.background = 'rgba(5, 8, 14, 0.7)';
+            navbar.style.padding = '1.2rem 5%';
+            navbar.style.background = 'var(--navbar-bg)';
             navbar.style.boxShadow = 'none';
+        }
+    });
+
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const icon = themeToggle.querySelector('i');
+
+    // Check for saved preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        body.classList.add('light-theme');
+        icon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('light-theme');
+        const isLight = body.classList.contains('light-theme');
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        
+        if (isLight) {
+            icon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+            icon.classList.replace('fa-sun', 'fa-moon');
         }
     });
 
@@ -80,16 +104,16 @@ function renderCards(projects) {
     if (!grid) return;
 
     grid.innerHTML = projects.map(p => {
-        const tagsHtml = p.tags.map(t => `<span class="tech-tag inline-block px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-cyan-300 mr-2">${escHtml(t)}</span>`).join(' ');
+        const tagsHtml = p.tags.map(t => `<span class="tech-tag">${escHtml(t)}</span>`).join(' ');
         return `
-        <div class="portfolio-card glass-panel reveal bg-slate-900/70 border border-white/10 rounded-2xl shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br hover:from-slate-900/80 hover:via-slate-900/80 hover:to-cyan-900/50 hover:border-cyan-300/60 hover:shadow-cyan-400/20 transition-colors transition-transform duration-200 cursor-pointer"
+        <div class="portfolio-card glass-panel reveal border border-white/10 rounded-2xl shadow-xl hover:-translate-y-1 hover:border-cyan-300/60 hover:shadow-cyan-400/20 transition-all duration-200 cursor-pointer"
              onclick="openModal('${escHtml(p.id)}')"
              role="button"
              tabindex="0"
              id="card-${escHtml(p.id)}">
             <div class="portfolio-content p-6 flex flex-col h-full">
-                <h3 class="text-xl font-semibold flex items-center gap-3 text-white mb-3"><i class="${escHtml(p.icon)}"></i> ${escHtml(p.title)}</h3>
-                <p class="text-slate-300 text-sm leading-relaxed mb-4 flex-1">${escHtml(p.shortDescription)}</p>
+                <h3 class="text-xl font-semibold flex items-center gap-3 mb-3"><i class="${escHtml(p.icon)}"></i> ${escHtml(p.title)}</h3>
+                <p class="text-secondary text-sm leading-relaxed mb-4 flex-1">${escHtml(p.shortDescription)}</p>
                 <div class="card-footer-row flex items-center justify-between">
                     <span class="flex flex-wrap gap-2">${tagsHtml}</span>
                     <span class="card-cta text-cyan-300 text-sm font-semibold flex items-center gap-1">View Details <i class="fas fa-arrow-right"></i></span>

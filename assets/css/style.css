@@ -3,19 +3,46 @@
     --primary-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
     --neon-blue: #00f2fe;
     --neon-purple: #ab47bc;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Theme-specific variables (Dark Mode Defaults) */
+    --bg-body: #05080e;
+    --bg-overlay: radial-gradient(circle at 15% 50%, rgba(0, 242, 254, 0.05), transparent 50%),
+                  radial-gradient(circle at 85% 30%, rgba(171, 71, 188, 0.05), transparent 50%),
+                  #05080e;
     --glass-bg: rgba(10, 15, 25, 0.65);
     --glass-border: rgba(255, 255, 255, 0.08);
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    --font-heading: 'Outfit', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --navbar-bg: rgba(5, 8, 14, 0.7);
+    --navbar-scrolled: rgba(5, 8, 14, 0.9);
+    --card-bg: rgba(15, 23, 42, 0.7);
+    --card-hover-to: rgba(8, 145, 178, 0.5);
+}
+
+.light-theme {
+    --bg-body: #f8fafc;
+    --bg-overlay: radial-gradient(circle at 15% 50%, rgba(0, 242, 254, 0.08), transparent 50%),
+                  radial-gradient(circle at 85% 30%, rgba(171, 71, 188, 0.08), transparent 50%),
+                  #f1f5f9;
+    --glass-bg: rgba(255, 255, 255, 0.75);
+    --glass-border: rgba(0, 242, 254, 0.15);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --navbar-bg: rgba(255, 255, 255, 0.7);
+    --navbar-scrolled: rgba(255, 255, 255, 0.9);
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --card-hover-to: rgba(0, 242, 254, 0.1);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 html {
@@ -25,7 +52,7 @@ html {
 body {
     font-family: var(--font-body);
     color: var(--text-primary);
-    background-color: #05080e;
+    background-color: var(--bg-body);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -38,9 +65,7 @@ body {
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    background: radial-gradient(circle at 15% 50%, rgba(0, 242, 254, 0.05), transparent 50%),
-                radial-gradient(circle at 85% 30%, rgba(171, 71, 188, 0.05), transparent 50%),
-                #05080e;
+    background: var(--bg-overlay);
 }
 
 /* Typography Customizations */
@@ -57,6 +82,10 @@ h1, h2, h3, h4, .logo {
     display: inline-block;
 }
 
+/* Utility Classes */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+
 /* Glassmorphism Utilities */
 .glass-panel {
     background: var(--glass-bg);
@@ -65,12 +94,12 @@ h1, h2, h3, h4, .logo {
     border: 1px solid var(--glass-border);
     border-radius: 16px;
     box-shadow: var(--glass-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .glass-panel:hover {
     box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
-    border-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(0, 242, 254, 0.4);
 }
 
 /* Base Components (Buttons & Navigation) */
@@ -147,7 +176,7 @@ h1, h2, h3, h4, .logo {
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* simple hidden for mobile, can add hamburger later */
+        display: none;
     }
     .hero h1 {
         font-size: 3rem;
@@ -180,7 +209,7 @@ h1, h2, h3, h4, .logo {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(5, 8, 14, 0.95);
+    background: var(--bg-body);
     backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
     border-radius: 12px;
@@ -211,7 +240,6 @@ h1, h2, h3, h4, .logo {
 }
 
 .nav-dropdown li a i { color: var(--neon-blue); font-size: 0.85rem; }
-.nav-dropdown li a::after { display: none; }
 
 .nav-dropdown li a:hover {
     color: var(--neon-blue);
@@ -286,6 +314,8 @@ h1, h2, h3, h4, .logo {
     margin: auto;
     border-radius: 20px;
     overflow: hidden;
+    background: var(--bg-body);
+    border: 1px solid var(--glass-border);
     animation: modalSlideIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -454,4 +484,70 @@ h1, h2, h3, h4, .logo {
     .modal-media { grid-template-columns: 1fr; }
     .modal-header { flex-direction: column; }
     .modal-header h2 { font-size: 1.3rem; }
+}
+
+/* ========================================
+   Theme Toggle Button
+   ======================================== */
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-toggle:hover {
+    background: rgba(0, 242, 254, 0.1);
+    border-color: var(--neon-blue);
+    transform: rotate(15deg);
+}
+
+.theme-toggle i {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.light-theme .theme-toggle i {
+    transform: rotate(360deg);
+}
+
+/* Adjusting elements for Light mode */
+.light-theme .nav-links a {
+    color: #1e293b;
+}
+.light-theme .nav-links a:hover {
+    color: var(--neon-blue);
+}
+.light-theme .logo {
+    color: #0f172a;
+}
+.light-theme .btn-secondary {
+    color: #1e293b;
+    background: rgba(255, 255, 255, 0.5);
+}
+.light-theme .tech-tag {
+    background: rgba(0, 242, 254, 0.1);
+    border-color: rgba(0, 242, 254, 0.2);
+    color: #0369a1;
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    color: var(--neon-blue);
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
 }

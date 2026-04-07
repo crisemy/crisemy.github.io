@@ -23,7 +23,7 @@
 <body>
     <div class="background-overlay"></div>
 
-    <nav class="navbar flex items-center justify-between px-6 md:px-10 py-4 sticky top-0 bg-slate-950/70 backdrop-blur border-b border-white/10 z-[1000]">
+    <nav class="navbar flex items-center justify-between px-6 md:px-10 py-4 sticky top-0 backdrop-blur border-b border-white/10 z-[1000] glass-panel">
         <a href="#home" class="logo flex items-center gap-3 text-cyan-300 font-extrabold text-xl hover:text-cyan-200 transition">
             <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                 class="logo-icon">
@@ -59,7 +59,12 @@
             <li><a class="hover:text-cyan-300 transition" href="#services">Expertise</a></li>
             <li><a class="hover:text-cyan-300 transition" href="#experience">Experience</a></li>
         </ul>
-        <a href="#contact" class="btn-primary-small ml-4 hidden md:inline-flex">Contact Me</a>
+        <div class="flex items-center gap-4">
+            <button id="theme-toggle" class="theme-toggle shadow-lg" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <a href="#contact" class="btn-primary-small hidden md:inline-flex">Contact Me</a>
+        </div>
     </nav>
 
     <main>
@@ -68,7 +73,7 @@
             <div class="hero-content reveal text-center max-w-4xl mx-auto px-4">
                 <p class="subtitle uppercase tracking-[0.25em] text-cyan-300 font-semibold">Senior QA Engineer & Test Architect</p>
                 <h1 class="glitch-text text-4xl md:text-5xl font-extrabold mt-3 leading-tight">Engineering <span class="gradient-text">Quality</span> at Scale</h1>
-                <p class="hero-description text-slate-300 text-lg mt-4 mb-8">20+ years building comprehensive automation frameworks, driving CI/CD
+                <p class="hero-description text-secondary text-lg mt-4 mb-8">20+ years building comprehensive automation frameworks, driving CI/CD
                     orchestration, and pioneering AI-assisted software testing.</p>
                 <div class="hero-buttons flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="#services" class="btn-primary">Explore Services</a>
@@ -93,11 +98,11 @@
         <!-- About Section -->
         <section id="about" class="about section-spacing">
             <h2 class="section-title reveal text-center text-3xl md:text-4xl font-extrabold mb-6">Profile Summary</h2>
-            <div class="about-card glass-panel reveal max-w-4xl mx-auto px-6 py-8 bg-slate-900/70 border border-white/10 rounded-2xl shadow-xl">
-                <p class="text-slate-300 text-lg mb-4">I specialize in test architecture design, quality observability, and AI-assisted testing approaches.
+            <div class="about-card glass-panel reveal max-w-4xl mx-auto px-6 py-8 border border-white/10 rounded-2xl shadow-xl">
+                <p class="text-secondary text-lg mb-4">I specialize in test architecture design, quality observability, and AI-assisted testing approaches.
                     Combining a deep understanding of standard practices with data-driven workflows, I strive to
                     optimize regression scope, reduce defect leakage, and secure release predictability.</p>
-                <p class="text-slate-200 text-lg mb-6">Equipped with hands-on expertise in <strong>Python, JavaScript, SQL,</strong> and CI/CD pipelines,
+                <p class="text-secondary text-lg mb-6">Equipped with hands-on expertise in <strong>Python, JavaScript, SQL,</strong> and CI/CD pipelines,
                     and currently pursuing a Master’s Degree in Data Science & AI. I am dedicated to bridging the gap
                     between rigorous quality control and modern machine learning techniques.</p>
                 <ul class="contact-links flex flex-col sm:flex-row sm:justify-center sm:gap-10 text-slate-200">
@@ -112,11 +117,10 @@
             <h2 class="section-title reveal text-center text-3xl md:text-4xl font-extrabold mb-6">Core Expertise</h2>
             <div class="services-grid grid gap-6 md:grid-cols-2 lg:grid-cols-4 px-2">
 
-                <div class="service-card glass-panel reveal bg-slate-900/70 border border-white/10 rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br hover:from-slate-900/80 hover:via-slate-900/80 hover:to-cyan-900/50 hover:border-cyan-300/60 hover:shadow-cyan-400/20 transition duration-200">
+                <div class="service-card glass-panel reveal border border-white/10 rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:border-cyan-300/60 transition duration-200">
                     <div class="icon-wrapper"><i class="fas fa-project-diagram"></i></div>
                     <h3>Test Architecture & Frameworks</h3>
-                    <p>Designing and building scalable, maintainable automation frameworks using tools like Cypress,
-                        Playwright, and Selenium to suit enterprise business risks.</p>
+                    <p class="text-secondary">Designing and building scalable, maintainable automation frameworks using tools like Cypress, Playwright, and Selenium to suit enterprise business risks.</p>
                 </div>
 
                 <div class="service-card glass-panel reveal bg-slate-900/70 border border-white/10 rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br hover:from-slate-900/80 hover:via-slate-900/80 hover:to-cyan-900/50 hover:border-cyan-300/60 hover:shadow-cyan-400/20 transition duration-200">
@@ -149,7 +153,7 @@
 
                 <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-panel bg-slate-900/70 border border-white/10 rounded-xl">
+                    <div class="timeline-content glass-panel border border-white/10 rounded-xl">
                         <span class="date text-cyan-300">2015 – Present</span>
                         <h3>Senior QA Engineering Consultant</h3>
                         <p class="company">Independent Contractor (Global)</p>
@@ -161,7 +165,7 @@
 
                 <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-panel bg-slate-900/70 border border-white/10 rounded-xl">
+                    <div class="timeline-content glass-panel border border-white/10 rounded-xl">
                         <span class="date text-cyan-300">2010 – 2015</span>
                         <h3>Project Director (QA-Focused)</h3>
                         <p class="company">BimIT SRL</p>
@@ -193,7 +197,7 @@
 
 
     <!-- Footer -->
-    <footer id="contact" class="glass-panel bg-slate-950/80 border-t border-white/10">
+    <footer id="contact" class="glass-panel border-t border-white/10">
         <div class="footer-content max-w-5xl mx-auto px-6 py-10 text-center">
             <p class="footer-mission reveal text-xl md:text-2xl text-slate-100 mb-6">Empowering organizations to scale quality engineering through <br> comprehensive automation audits, AI-driven testing, <br> and robust architectural design.</p>
             <h2 class="reveal text-3xl font-extrabold text-white mb-6">Ready to enhance your platform's quality?</h2>
