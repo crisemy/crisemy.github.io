@@ -39,7 +39,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:11:58Z",
-    "lastSyncedAt": "2026-04-05T05:04:51Z"
+    "lastSyncedAt": "2026-04-12T05:14:42Z"
   },
   {
     "id": "modal-ai-test",
@@ -85,7 +85,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-04-04T23:18:54Z",
-    "lastSyncedAt": "2026-04-05T05:04:51Z"
+    "lastSyncedAt": "2026-04-12T05:14:42Z"
   },
   {
     "id": "modal-ai-pipeline",
@@ -125,7 +125,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:14:03Z",
-    "lastSyncedAt": "2026-04-05T05:04:51Z"
+    "lastSyncedAt": "2026-04-12T05:14:42Z"
   },
   {
     "id": "modal-qa-lab",
@@ -153,7 +153,7 @@
       "Reporting engine exportable to CSV / PDF stakeholder formats",
       "Repository: https://github.com/crisemy/qa-intelligence-lab",
       "Primary language: Jupyter Notebook",
-      "Last updated: 2026-03-25",
+      "Last updated: 2026-04-09",
       "Topics: portfolio-qa"
     ],
     "githubUrl": "https://github.com/crisemy/qa-intelligence-lab",
@@ -164,8 +164,8 @@
     "repoTopics": [
       "portfolio-qa"
     ],
-    "repoUpdatedAt": "2026-03-25T15:18:53Z",
-    "lastSyncedAt": "2026-04-05T05:04:51Z"
+    "repoUpdatedAt": "2026-04-09T09:50:42Z",
+    "lastSyncedAt": "2026-04-12T05:14:42Z"
   },
   {
     "id": "modal-cypress",
@@ -223,7 +223,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-04-02T18:58:30Z",
-    "lastSyncedAt": "2026-04-05T05:04:51Z"
+    "lastSyncedAt": "2026-04-12T05:14:42Z"
   },
   {
     "id": "modal-cypress_automation_core",
@@ -254,6 +254,6 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:11:17Z",
-    "lastSyncedAt": "2026-04-05T05:04:51Z"
+    "lastSyncedAt": "2026-04-12T05:14:42Z"
   }
 ]
