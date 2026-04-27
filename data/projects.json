@@ -168,33 +168,6 @@
     "lastSyncedAt": "2026-04-26T05:29:55Z"
   },
   {
-    "id": "modal-cypress",
-    "title": "Cypress E2E Framework",
-    "icon": "fas fa-flask",
-    "navLabel": "Cypress E2E Framework",
-    "shortDescription": "A custom-built robust automation framework engineered with Cypress using POM implementation principles specifically designed for UI scalability.",
-    "fullDescription": "A production-grade Cypress E2E automation framework built on Page Object Model principles. Designed for scalable UI test coverage across complex SaaS applications.",
-    "tags": [
-      "Cypress",
-      "JavaScript"
-    ],
-    "modalTags": [
-      "Cypress",
-      "JavaScript",
-      "Page Object Model"
-    ],
-    "features": [
-      "Full Page Object Model (POM) architecture for maximum maintainability",
-      "Custom Cypress commands and reusable component utilities",
-      "Cross-browser testing support (Chrome, Firefox, Edge)",
-      "CI-ready with GitHub Actions integration and Mochawesome HTML reports"
-    ],
-    "githubUrl": "https://github.com/crisemy/cypress-framework-the-internet",
-    "screenshotUrl": null,
-    "priority": 5,
-    "source": "manual"
-  },
-  {
     "id": "modal-agentic_playwright",
     "title": "Agentic Playwright",
     "icon": "fas fa-check-double",
