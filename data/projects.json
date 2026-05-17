@@ -27,7 +27,7 @@
       "Offline, interactive analytics Streamlit Dashboard built with Plotly",
       "Repository: https://github.com/crisemy/ai-testing-prompts-agents",
       "Primary language: Python",
-      "Last updated: 2026-03-24",
+      "Last updated: 2026-05-14",
       "Topics: portfolio-qa"
     ],
     "githubUrl": "https://github.com/crisemy/ai-testing-prompts-agents",
@@ -38,8 +38,8 @@
     "repoTopics": [
       "portfolio-qa"
     ],
-    "repoUpdatedAt": "2026-03-24T10:11:58Z",
-    "lastSyncedAt": "2026-05-10T05:54:26Z"
+    "repoUpdatedAt": "2026-05-14T20:52:36Z",
+    "lastSyncedAt": "2026-05-17T06:11:16Z"
   },
   {
     "id": "modal-ai-test",
@@ -85,7 +85,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-04-04T23:18:54Z",
-    "lastSyncedAt": "2026-05-10T05:54:26Z"
+    "lastSyncedAt": "2026-05-17T06:11:16Z"
   },
   {
     "id": "modal-ai-pipeline",
@@ -125,7 +125,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:14:03Z",
-    "lastSyncedAt": "2026-05-10T05:54:26Z"
+    "lastSyncedAt": "2026-05-17T06:11:16Z"
   },
   {
     "id": "modal-qa-lab",
@@ -165,7 +165,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-04-22T20:39:00Z",
-    "lastSyncedAt": "2026-05-10T05:54:26Z"
+    "lastSyncedAt": "2026-05-17T06:11:16Z"
   },
   {
     "id": "modal-agentic_playwright",
@@ -196,7 +196,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-08T02:13:47Z",
-    "lastSyncedAt": "2026-05-10T05:54:26Z"
+    "lastSyncedAt": "2026-05-17T06:11:16Z"
   },
   {
     "id": "modal-cypress_automation_core",
@@ -227,6 +227,6 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:11:17Z",
-    "lastSyncedAt": "2026-05-10T05:54:26Z"
+    "lastSyncedAt": "2026-05-17T06:11:16Z"
   }
 ]
