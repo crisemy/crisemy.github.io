@@ -24,6 +24,18 @@ import urllib.error
 import re
 from datetime import datetime, timezone
 
+# Ensure stdout and stderr use UTF-8 encoding (especially on Windows) to prevent UnicodeEncodeErrors when printing special symbols.
+if hasattr(sys.stdout, 'reconfigure'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+if hasattr(sys.stderr, 'reconfigure'):
+    try:
+        sys.stderr.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+
 # ---------------------------------------------------------------------------
 # Configuration — modify these to suit your needs
 # ---------------------------------------------------------------------------
@@ -184,6 +196,34 @@ def build_synced_features(repo: dict, topics: list[str]) -> list[str]:
     ]
 
 
+def format_project_title(name: str) -> str:
+    """Formats the repo name into a beautiful title, preserving acronyms."""
+    words = name.replace("-", " ").replace("_", " ").split()
+    formatted_words = []
+    acronyms = {
+        "llm": "LLM",
+        "qa": "QA",
+        "ci": "CI",
+        "cd": "CD",
+        "cicd": "CI/CD",
+        "api": "API",
+        "e2e": "E2E",
+        "ml": "ML",
+        "pom": "POM",
+        "sql": "SQL",
+        "ui": "UI",
+        "js": "JS",
+        "ts": "TS"
+    }
+    for w in words:
+        w_lower = w.lower()
+        if w_lower in acronyms:
+            formatted_words.append(acronyms[w_lower])
+        else:
+            formatted_words.append(w.capitalize())
+    return " ".join(formatted_words)
+
+
 def build_new_project_entry(repo: dict, topics: list[str]) -> dict:
     """
     Constructs a new project dictionary from a raw GitHub repo object.
@@ -194,12 +234,13 @@ def build_new_project_entry(repo: dict, topics: list[str]) -> dict:
     icon = pick_icon(name, description)
     tags = generate_tags_from_languages(repo)
     modal_id = f"modal-{name.lower().replace('-', '_')}"
+    title = format_project_title(name)
 
     return {
         "id": modal_id,
-        "title": name.replace("-", " ").title(),
+        "title": title,
         "icon": icon,
-        "navLabel": name.replace("-", " ").title(),
+        "navLabel": title,
         "shortDescription": description,
         "fullDescription": description,
         "tags": tags,
@@ -254,7 +295,12 @@ def sync_existing_project(existing: dict, repo: dict, topics: list[str], synced_
         ]
         updated["features"] = manual_features + build_synced_features(repo, topics)
 
-    return updated, updated != existing
+    # To see if there are actual changes, compare the dictionaries excluding the volatile lastSyncedAt field
+    existing_compare = {k: v for k, v in existing.items() if k != "lastSyncedAt"}
+    updated_compare = {k: v for k, v in updated.items() if k != "lastSyncedAt"}
+    changed = (existing_compare != updated_compare)
+
+    return updated, changed
 
 
 def load_projects(path: str) -> list[dict]:
@@ -314,9 +360,9 @@ def run(dry_run: bool = False) -> None:
     matching_repos = []
 
     for repo in all_repos:
-        # The repo list response sometimes includes topics; if not, fetch separately.
-        repo_topics = repo.get("topics", [])
-        if not repo_topics:
+        # The repo list response includes topics; if not present, fetch separately.
+        repo_topics = repo.get("topics")
+        if repo_topics is None:
             repo_topics = fetch_repo_topics(GITHUB_USERNAME, repo["name"])
 
         matched = PORTFOLIO_TOPICS.intersection(set(repo_topics))
@@ -376,7 +422,11 @@ def run(dry_run: bool = False) -> None:
         log("No new repositories discovered, but existing entries were checked for updates.")
 
     # 5. Merge, sort, and save
-    refreshed_projects.sort(key=lambda p: (p.get("priority", 99), p.get("title", "")))
+    # Sort strictly by repoUpdatedAt in descending order (freshest projects first)
+    refreshed_projects.sort(
+        key=lambda p: p.get("repoUpdatedAt") or "1970-01-01T00:00:00Z",
+        reverse=True,
+    )
     sync_message = (
         f"Portfolio sync: {synced_at} | "
         f"{len(matching_repos)} tracked repos | "
@@ -384,7 +434,11 @@ def run(dry_run: bool = False) -> None:
         f"{len(updated_projects)} updated"
     )
 
-    has_changes = bool(new_projects or updated_projects)
+    # Compare the complete refreshed project list against the existing list, excluding the volatile lastSyncedAt field.
+    # This correctly catches additions, deletions, metadata edits, and any changes in the sorted card order.
+    existing_compare = [{k: v for k, v in p.items() if k != "lastSyncedAt"} for p in existing_projects]
+    refreshed_compare = [{k: v for k, v in p.items() if k != "lastSyncedAt"} for p in refreshed_projects]
+    has_changes = (existing_compare != refreshed_compare)
 
     if not dry_run and has_changes:
         save_projects(PROJECTS_JSON_PATH, refreshed_projects)
