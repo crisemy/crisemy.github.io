@@ -1,5 +1,36 @@
 [
   {
+    "id": "modal-frontier_llm_safetyops",
+    "title": "Frontier LLM Safetyops",
+    "icon": "fas fa-check-double",
+    "navLabel": "Frontier LLM Safetyops",
+    "shortDescription": "Curated knowledge base and methodology framework for AI-driven Quality Engineering, Test Automation, and Data-Driven Quality Systems",
+    "fullDescription": "Curated knowledge base and methodology framework for AI-driven Quality Engineering, Test Automation, and Data-Driven Quality Systems",
+    "tags": [
+      "Python"
+    ],
+    "modalTags": [
+      "Python",
+      "portfolio-qa"
+    ],
+    "features": [
+      "Repository: https://github.com/crisemy/frontier-llm-safetyops",
+      "Primary language: Python",
+      "Last updated: 2026-05-18",
+      "Topics: portfolio-qa"
+    ],
+    "githubUrl": "https://github.com/crisemy/frontier-llm-safetyops",
+    "screenshotUrl": null,
+    "priority": 99,
+    "source": "agent",
+    "repoLanguage": "Python",
+    "repoTopics": [
+      "portfolio-qa"
+    ],
+    "repoUpdatedAt": "2026-05-18T14:20:56Z",
+    "lastSyncedAt": "2026-05-18T18:36:24Z"
+  },
+  {
     "id": "modal-ai-testing",
     "title": "LLM & Agent Testing",
     "icon": "fas fa-check-double",
@@ -39,7 +70,78 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-14T20:52:36Z",
-    "lastSyncedAt": "2026-05-18T14:22:06Z"
+    "lastSyncedAt": "2026-05-18T18:36:24Z"
+  },
+  {
+    "id": "modal-agentic_playwright",
+    "title": "Agentic Playwright",
+    "icon": "fas fa-check-double",
+    "navLabel": "Agentic Playwright",
+    "shortDescription": "AgenticPlaywright — AI-Powered Multi-Agent Test Automation Framework with Playwright, Grok & CrewAI. AgenticPlaywright as a practical experiment in modern test automation.",
+    "fullDescription": "AgenticPlaywright — AI-Powered Multi-Agent Test Automation Framework with Playwright, Grok & CrewAI. AgenticPlaywright as a practical experiment in modern test automation.",
+    "tags": [
+      "Python"
+    ],
+    "modalTags": [
+      "Python",
+      "portfolio-qa"
+    ],
+    "features": [
+      "Repository: https://github.com/crisemy/agentic-playwright",
+      "Primary language: Python",
+      "Last updated: 2026-05-08",
+      "Topics: portfolio-qa"
+    ],
+    "githubUrl": "https://github.com/crisemy/agentic-playwright",
+    "screenshotUrl": null,
+    "priority": 99,
+    "source": "agent",
+    "repoLanguage": "Python",
+    "repoTopics": [
+      "portfolio-qa"
+    ],
+    "repoUpdatedAt": "2026-05-08T02:13:47Z",
+    "lastSyncedAt": "2026-05-18T18:36:24Z"
+  },
+  {
+    "id": "modal-qa-lab",
+    "title": "QA Intelligence Lab",
+    "icon": "fas fa-vial",
+    "navLabel": "QA Intelligence Lab",
+    "shortDescription": "A resilience testing and experimentation platform combining chaos engineering, traditional QA automation and interactive data analysis dashboards.",
+    "fullDescription": "A resilience testing and experimentation platform combining chaos engineering with traditional QA automation and interactive data analysis dashboards for deep quality observability.",
+    "tags": [
+      "Data Integration",
+      "Resilience",
+      "Jupyter Notebook"
+    ],
+    "modalTags": [
+      "Data Integration",
+      "Chaos Engineering",
+      "Python",
+      "Jupyter Notebook",
+      "portfolio-qa"
+    ],
+    "features": [
+      "Chaos Engineering experiments to validate system resilience under fault conditions",
+      "Interactive dashboards tracking defect density, coverage and release health",
+      "Modular test harness integrating multiple QA automation tools",
+      "Reporting engine exportable to CSV / PDF stakeholder formats",
+      "Repository: https://github.com/crisemy/qa-intelligence-lab",
+      "Primary language: Jupyter Notebook",
+      "Last updated: 2026-04-22",
+      "Topics: portfolio-qa"
+    ],
+    "githubUrl": "https://github.com/crisemy/qa-intelligence-lab",
+    "screenshotUrl": null,
+    "priority": 4,
+    "source": "manual",
+    "repoLanguage": "Jupyter Notebook",
+    "repoTopics": [
+      "portfolio-qa"
+    ],
+    "repoUpdatedAt": "2026-04-22T20:39:00Z",
+    "lastSyncedAt": "2026-05-18T18:36:24Z"
   },
   {
     "id": "modal-ai-test",
@@ -85,7 +187,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-04-04T23:18:54Z",
-    "lastSyncedAt": "2026-05-18T14:22:06Z"
+    "lastSyncedAt": "2026-05-18T18:36:24Z"
   },
   {
     "id": "modal-ai-pipeline",
@@ -125,78 +227,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:14:03Z",
-    "lastSyncedAt": "2026-05-18T14:22:06Z"
-  },
-  {
-    "id": "modal-qa-lab",
-    "title": "QA Intelligence Lab",
-    "icon": "fas fa-vial",
-    "navLabel": "QA Intelligence Lab",
-    "shortDescription": "A resilience testing and experimentation platform combining chaos engineering, traditional QA automation and interactive data analysis dashboards.",
-    "fullDescription": "A resilience testing and experimentation platform combining chaos engineering with traditional QA automation and interactive data analysis dashboards for deep quality observability.",
-    "tags": [
-      "Data Integration",
-      "Resilience",
-      "Jupyter Notebook"
-    ],
-    "modalTags": [
-      "Data Integration",
-      "Chaos Engineering",
-      "Python",
-      "Jupyter Notebook",
-      "portfolio-qa"
-    ],
-    "features": [
-      "Chaos Engineering experiments to validate system resilience under fault conditions",
-      "Interactive dashboards tracking defect density, coverage and release health",
-      "Modular test harness integrating multiple QA automation tools",
-      "Reporting engine exportable to CSV / PDF stakeholder formats",
-      "Repository: https://github.com/crisemy/qa-intelligence-lab",
-      "Primary language: Jupyter Notebook",
-      "Last updated: 2026-04-22",
-      "Topics: portfolio-qa"
-    ],
-    "githubUrl": "https://github.com/crisemy/qa-intelligence-lab",
-    "screenshotUrl": null,
-    "priority": 4,
-    "source": "manual",
-    "repoLanguage": "Jupyter Notebook",
-    "repoTopics": [
-      "portfolio-qa"
-    ],
-    "repoUpdatedAt": "2026-04-22T20:39:00Z",
-    "lastSyncedAt": "2026-05-18T14:22:06Z"
-  },
-  {
-    "id": "modal-agentic_playwright",
-    "title": "Agentic Playwright",
-    "icon": "fas fa-check-double",
-    "navLabel": "Agentic Playwright",
-    "shortDescription": "AgenticPlaywright — AI-Powered Multi-Agent Test Automation Framework with Playwright, Grok & CrewAI. AgenticPlaywright as a practical experiment in modern test automation.",
-    "fullDescription": "AgenticPlaywright — AI-Powered Multi-Agent Test Automation Framework with Playwright, Grok & CrewAI. AgenticPlaywright as a practical experiment in modern test automation.",
-    "tags": [
-      "Python"
-    ],
-    "modalTags": [
-      "Python",
-      "portfolio-qa"
-    ],
-    "features": [
-      "Repository: https://github.com/crisemy/agentic-playwright",
-      "Primary language: Python",
-      "Last updated: 2026-05-08",
-      "Topics: portfolio-qa"
-    ],
-    "githubUrl": "https://github.com/crisemy/agentic-playwright",
-    "screenshotUrl": null,
-    "priority": 99,
-    "source": "agent",
-    "repoLanguage": "Python",
-    "repoTopics": [
-      "portfolio-qa"
-    ],
-    "repoUpdatedAt": "2026-05-08T02:13:47Z",
-    "lastSyncedAt": "2026-05-18T14:22:06Z"
+    "lastSyncedAt": "2026-05-18T18:36:24Z"
   },
   {
     "id": "modal-cypress_automation_core",
@@ -227,37 +258,6 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:11:17Z",
-    "lastSyncedAt": "2026-05-18T14:22:06Z"
-  },
-  {
-    "id": "modal-frontier_llm_safetyops",
-    "title": "Frontier Llm Safetyops",
-    "icon": "fas fa-check-double",
-    "navLabel": "Frontier Llm Safetyops",
-    "shortDescription": "Curated knowledge base and methodology framework for AI-driven Quality Engineering, Test Automation, and Data-Driven Quality Systems",
-    "fullDescription": "Curated knowledge base and methodology framework for AI-driven Quality Engineering, Test Automation, and Data-Driven Quality Systems",
-    "tags": [
-      "Python"
-    ],
-    "modalTags": [
-      "Python",
-      "portfolio-qa"
-    ],
-    "features": [
-      "Repository: https://github.com/crisemy/frontier-llm-safetyops",
-      "Primary language: Python",
-      "Last updated: 2026-05-18",
-      "Topics: portfolio-qa"
-    ],
-    "githubUrl": "https://github.com/crisemy/frontier-llm-safetyops",
-    "screenshotUrl": null,
-    "priority": 99,
-    "source": "agent",
-    "repoLanguage": "Python",
-    "repoTopics": [
-      "portfolio-qa"
-    ],
-    "repoUpdatedAt": "2026-05-18T14:20:56Z",
-    "lastSyncedAt": "2026-05-18T14:22:06Z"
+    "lastSyncedAt": "2026-05-18T18:36:24Z"
   }
 ]
