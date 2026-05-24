@@ -1,5 +1,51 @@
 [
   {
+    "id": "modal-ai-test",
+    "title": "AI Test Generator",
+    "icon": "fas fa-code-branch",
+    "navLabel": "AI Test Generator",
+    "shortDescription": "Intelligent web tool generating high-quality test cases and Playwright scripts prioritized through ML-based risk scoring models.",
+    "fullDescription": "An intelligent fintech QA web tool that combines a Groq-powered LLM with a Random Forest ML model to generate, risk-score and prioritize test cases from plain-English user stories.",
+    "tags": [
+      "Playwright",
+      "AI/GenAI",
+      "SHAP",
+      "Jupyter Notebook",
+      "Python"
+    ],
+    "modalTags": [
+      "Streamlit",
+      "Groq LLM",
+      "scikit-learn",
+      "SHAP",
+      "Playwright",
+      "Jupyter Notebook",
+      "portfolio-qa",
+      "Python"
+    ],
+    "features": [
+      "Generates 10–15 Gherkin-style test cases per User Story via Llama 3.3 70B",
+      "ML Risk Scoring with Random Forest — predicts High / Medium / Low defect likelihood",
+      "SHAP Waterfall Plots — full model explainability per test case",
+      "Batch CSV backlog upload — prioritize thousands of stories without API calls",
+      "Downloads a ready-to-run Playwright POM Framework + GitHub Actions CI pipeline",
+      "Repository: https://github.com/crisemy/ai-test-generator",
+      "Primary language: Python",
+      "Last updated: 2026-05-23",
+      "Topics: portfolio-qa"
+    ],
+    "githubUrl": "https://github.com/crisemy/ai-test-generator",
+    "screenshotUrl": "./assets/images/ai_test_generator_preview.svg",
+    "priority": 2,
+    "source": "manual",
+    "repoLanguage": "Python",
+    "repoTopics": [
+      "portfolio-qa"
+    ],
+    "repoUpdatedAt": "2026-05-23T17:13:16Z",
+    "lastSyncedAt": "2026-05-24T06:26:07Z"
+  },
+  {
     "id": "modal-frontier_llm_safetyops",
     "title": "Frontier LLM Safetyops",
     "icon": "fas fa-check-double",
@@ -28,7 +74,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-18T14:20:56Z",
-    "lastSyncedAt": "2026-05-18T18:36:24Z"
+    "lastSyncedAt": "2026-05-24T06:26:07Z"
   },
   {
     "id": "modal-ai-testing",
@@ -70,7 +116,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-14T20:52:36Z",
-    "lastSyncedAt": "2026-05-18T18:36:24Z"
+    "lastSyncedAt": "2026-05-24T06:26:07Z"
   },
   {
     "id": "modal-agentic_playwright",
@@ -101,7 +147,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-08T02:13:47Z",
-    "lastSyncedAt": "2026-05-18T18:36:24Z"
+    "lastSyncedAt": "2026-05-24T06:26:07Z"
   },
   {
     "id": "modal-qa-lab",
@@ -141,53 +187,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-04-22T20:39:00Z",
-    "lastSyncedAt": "2026-05-18T18:36:24Z"
-  },
-  {
-    "id": "modal-ai-test",
-    "title": "AI Test Generator",
-    "icon": "fas fa-code-branch",
-    "navLabel": "AI Test Generator",
-    "shortDescription": "Intelligent web tool generating high-quality test cases and Playwright scripts prioritized through ML-based risk scoring models.",
-    "fullDescription": "An intelligent fintech QA web tool that combines a Groq-powered LLM with a Random Forest ML model to generate, risk-score and prioritize test cases from plain-English user stories.",
-    "tags": [
-      "Playwright",
-      "AI/GenAI",
-      "SHAP",
-      "Jupyter Notebook",
-      "Python"
-    ],
-    "modalTags": [
-      "Streamlit",
-      "Groq LLM",
-      "scikit-learn",
-      "SHAP",
-      "Playwright",
-      "Jupyter Notebook",
-      "portfolio-qa",
-      "Python"
-    ],
-    "features": [
-      "Generates 10–15 Gherkin-style test cases per User Story via Llama 3.3 70B",
-      "ML Risk Scoring with Random Forest — predicts High / Medium / Low defect likelihood",
-      "SHAP Waterfall Plots — full model explainability per test case",
-      "Batch CSV backlog upload — prioritize thousands of stories without API calls",
-      "Downloads a ready-to-run Playwright POM Framework + GitHub Actions CI pipeline",
-      "Repository: https://github.com/crisemy/ai-test-generator",
-      "Primary language: Python",
-      "Last updated: 2026-04-04",
-      "Topics: portfolio-qa"
-    ],
-    "githubUrl": "https://github.com/crisemy/ai-test-generator",
-    "screenshotUrl": "./assets/images/ai_test_generator_preview.svg",
-    "priority": 2,
-    "source": "manual",
-    "repoLanguage": "Python",
-    "repoTopics": [
-      "portfolio-qa"
-    ],
-    "repoUpdatedAt": "2026-04-04T23:18:54Z",
-    "lastSyncedAt": "2026-05-18T18:36:24Z"
+    "lastSyncedAt": "2026-05-24T06:26:07Z"
   },
   {
     "id": "modal-ai-pipeline",
@@ -227,7 +227,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:14:03Z",
-    "lastSyncedAt": "2026-05-18T18:36:24Z"
+    "lastSyncedAt": "2026-05-24T06:26:07Z"
   },
   {
     "id": "modal-cypress_automation_core",
@@ -258,6 +258,6 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:11:17Z",
-    "lastSyncedAt": "2026-05-18T18:36:24Z"
+    "lastSyncedAt": "2026-05-24T06:26:07Z"
   }
 ]
