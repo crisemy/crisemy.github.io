@@ -1,5 +1,109 @@
 [
   {
+    "id": "modal-ai-testing",
+    "title": "LLM & Agent Testing",
+    "icon": "fas fa-check-double",
+    "navLabel": "LLM & Agent Testing",
+    "shortDescription": "A comprehensive QA pipeline evaluating Large Language Models, prompts, and dynamic autonomous AI agents using Promptfoo and DeepEval.",
+    "fullDescription": "A Proof-of-Concept for AI Systems Testing & Evaluation. It ensures generative AI applications are reliable, accurate, and aligned with business guardrails before reaching production.",
+    "tags": [
+      "Promptfoo",
+      "DeepEval",
+      "LLMs",
+      "Python"
+    ],
+    "modalTags": [
+      "Promptfoo",
+      "DeepEval",
+      "Python",
+      "Streamlit",
+      "LangChain",
+      "portfolio-qa"
+    ],
+    "features": [
+      "Prompt Regression Testing with Promptfoo to evaluate matrices and assert LLM guardrails",
+      "Autonomous Agent logic evaluation via DeepEval on LangChain components",
+      "Cost-free evaluation wrappers using Groq (Llama 3) for metrics",
+      "Offline, interactive analytics Streamlit Dashboard built with Plotly",
+      "Repository: https://github.com/crisemy/ai-testing-prompts-agents",
+      "Primary language: Python",
+      "Last updated: 2026-05-29",
+      "Topics: portfolio-qa"
+    ],
+    "githubUrl": "https://github.com/crisemy/ai-testing-prompts-agents",
+    "screenshotUrl": null,
+    "priority": 1,
+    "source": "manual",
+    "repoLanguage": "Python",
+    "repoTopics": [
+      "portfolio-qa"
+    ],
+    "repoUpdatedAt": "2026-05-29T02:21:57Z",
+    "lastSyncedAt": "2026-05-31T06:45:55Z"
+  },
+  {
+    "id": "modal-auto_qa_agent_insight",
+    "title": "Auto QA Agent Insight",
+    "icon": "fas fa-check-double",
+    "navLabel": "Auto QA Agent Insight",
+    "shortDescription": "Automated bug triage, root-cause analysis & remediation using a deterministic multi-agent AI pipeline with security guardrails and quality gates.",
+    "fullDescription": "Automated bug triage, root-cause analysis & remediation using a deterministic multi-agent AI pipeline with security guardrails and quality gates.",
+    "tags": [
+      "Python"
+    ],
+    "modalTags": [
+      "Python",
+      "portfolio-qa"
+    ],
+    "features": [
+      "Repository: https://github.com/crisemy/auto-qa-agent-insight",
+      "Primary language: Python",
+      "Last updated: 2026-05-28",
+      "Topics: portfolio-qa"
+    ],
+    "githubUrl": "https://github.com/crisemy/auto-qa-agent-insight",
+    "screenshotUrl": null,
+    "priority": 99,
+    "source": "agent",
+    "repoLanguage": "Python",
+    "repoTopics": [
+      "portfolio-qa"
+    ],
+    "repoUpdatedAt": "2026-05-28T16:13:49Z",
+    "lastSyncedAt": "2026-05-31T06:45:55Z"
+  },
+  {
+    "id": "modal-owasp_llm",
+    "title": "Owasp LLM",
+    "icon": "fas fa-check-double",
+    "navLabel": "Owasp LLM",
+    "shortDescription": "A comprehensive security testing framework implementing the OWASP Top 10 for Large Language Model Applications.",
+    "fullDescription": "A comprehensive security testing framework implementing the OWASP Top 10 for Large Language Model Applications.",
+    "tags": [
+      "Python"
+    ],
+    "modalTags": [
+      "Python",
+      "portfolio-qa"
+    ],
+    "features": [
+      "Repository: https://github.com/crisemy/owasp-llm",
+      "Primary language: Python",
+      "Last updated: 2026-05-28",
+      "Topics: portfolio-qa"
+    ],
+    "githubUrl": "https://github.com/crisemy/owasp-llm",
+    "screenshotUrl": null,
+    "priority": 99,
+    "source": "agent",
+    "repoLanguage": "Python",
+    "repoTopics": [
+      "portfolio-qa"
+    ],
+    "repoUpdatedAt": "2026-05-28T14:19:32Z",
+    "lastSyncedAt": "2026-05-31T06:45:55Z"
+  },
+  {
     "id": "modal-ai-test",
     "title": "AI Test Generator",
     "icon": "fas fa-code-branch",
@@ -43,7 +147,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-23T17:13:16Z",
-    "lastSyncedAt": "2026-05-24T06:26:07Z"
+    "lastSyncedAt": "2026-05-31T06:45:55Z"
   },
   {
     "id": "modal-frontier_llm_safetyops",
@@ -74,49 +178,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-18T14:20:56Z",
-    "lastSyncedAt": "2026-05-24T06:26:07Z"
-  },
-  {
-    "id": "modal-ai-testing",
-    "title": "LLM & Agent Testing",
-    "icon": "fas fa-check-double",
-    "navLabel": "LLM & Agent Testing",
-    "shortDescription": "A comprehensive QA pipeline evaluating Large Language Models, prompts, and dynamic autonomous AI agents using Promptfoo and DeepEval.",
-    "fullDescription": "A Proof-of-Concept for AI Systems Testing & Evaluation. It ensures generative AI applications are reliable, accurate, and aligned with business guardrails before reaching production.",
-    "tags": [
-      "Promptfoo",
-      "DeepEval",
-      "LLMs",
-      "Python"
-    ],
-    "modalTags": [
-      "Promptfoo",
-      "DeepEval",
-      "Python",
-      "Streamlit",
-      "LangChain",
-      "portfolio-qa"
-    ],
-    "features": [
-      "Prompt Regression Testing with Promptfoo to evaluate matrices and assert LLM guardrails",
-      "Autonomous Agent logic evaluation via DeepEval on LangChain components",
-      "Cost-free evaluation wrappers using Groq (Llama 3) for metrics",
-      "Offline, interactive analytics Streamlit Dashboard built with Plotly",
-      "Repository: https://github.com/crisemy/ai-testing-prompts-agents",
-      "Primary language: Python",
-      "Last updated: 2026-05-14",
-      "Topics: portfolio-qa"
-    ],
-    "githubUrl": "https://github.com/crisemy/ai-testing-prompts-agents",
-    "screenshotUrl": null,
-    "priority": 1,
-    "source": "manual",
-    "repoLanguage": "Python",
-    "repoTopics": [
-      "portfolio-qa"
-    ],
-    "repoUpdatedAt": "2026-05-14T20:52:36Z",
-    "lastSyncedAt": "2026-05-24T06:26:07Z"
+    "lastSyncedAt": "2026-05-31T06:45:55Z"
   },
   {
     "id": "modal-agentic_playwright",
@@ -147,7 +209,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-08T02:13:47Z",
-    "lastSyncedAt": "2026-05-24T06:26:07Z"
+    "lastSyncedAt": "2026-05-31T06:45:55Z"
   },
   {
     "id": "modal-qa-lab",
@@ -187,7 +249,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-04-22T20:39:00Z",
-    "lastSyncedAt": "2026-05-24T06:26:07Z"
+    "lastSyncedAt": "2026-05-31T06:45:55Z"
   },
   {
     "id": "modal-ai-pipeline",
@@ -227,7 +289,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:14:03Z",
-    "lastSyncedAt": "2026-05-24T06:26:07Z"
+    "lastSyncedAt": "2026-05-31T06:45:55Z"
   },
   {
     "id": "modal-cypress_automation_core",
@@ -258,6 +320,6 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:11:17Z",
-    "lastSyncedAt": "2026-05-24T06:26:07Z"
+    "lastSyncedAt": "2026-05-31T06:45:55Z"
   }
 ]
