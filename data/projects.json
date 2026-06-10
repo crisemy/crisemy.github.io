@@ -1,5 +1,36 @@
 [
   {
+    "id": "modal-ai_test_orchestrator",
+    "title": "Ai Test Orchestrator",
+    "icon": "fas fa-check-double",
+    "navLabel": "Ai Test Orchestrator",
+    "shortDescription": "intelligent, self-healing E2E testing pipeline that uses local LLMs (Ollama) and Playwright to automatically generate, validate, normalize, execute, and evolve test suites.",
+    "fullDescription": "intelligent, self-healing E2E testing pipeline that uses local LLMs (Ollama) and Playwright to automatically generate, validate, normalize, execute, and evolve test suites.",
+    "tags": [
+      "Python"
+    ],
+    "modalTags": [
+      "Python",
+      "portfolio-qa"
+    ],
+    "features": [
+      "Repository: https://github.com/crisemy/ai-test-orchestrator",
+      "Primary language: Python",
+      "Last updated: 2026-06-10",
+      "Topics: portfolio-qa"
+    ],
+    "githubUrl": "https://github.com/crisemy/ai-test-orchestrator",
+    "screenshotUrl": null,
+    "priority": 99,
+    "source": "agent",
+    "repoLanguage": "Python",
+    "repoTopics": [
+      "portfolio-qa"
+    ],
+    "repoUpdatedAt": "2026-06-10T22:43:08Z",
+    "lastSyncedAt": "2026-06-10T22:46:16Z"
+  },
+  {
     "id": "modal-ai-testing",
     "title": "LLM & Agent Testing",
     "icon": "fas fa-check-double",
@@ -39,7 +70,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-29T02:21:57Z",
-    "lastSyncedAt": "2026-05-31T06:45:55Z"
+    "lastSyncedAt": "2026-06-10T22:46:16Z"
   },
   {
     "id": "modal-auto_qa_agent_insight",
@@ -70,7 +101,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-28T16:13:49Z",
-    "lastSyncedAt": "2026-05-31T06:45:55Z"
+    "lastSyncedAt": "2026-06-10T22:46:16Z"
   },
   {
     "id": "modal-owasp_llm",
@@ -101,7 +132,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-28T14:19:32Z",
-    "lastSyncedAt": "2026-05-31T06:45:55Z"
+    "lastSyncedAt": "2026-06-10T22:46:16Z"
   },
   {
     "id": "modal-ai-test",
@@ -147,7 +178,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-23T17:13:16Z",
-    "lastSyncedAt": "2026-05-31T06:45:55Z"
+    "lastSyncedAt": "2026-06-10T22:46:16Z"
   },
   {
     "id": "modal-frontier_llm_safetyops",
@@ -178,7 +209,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-18T14:20:56Z",
-    "lastSyncedAt": "2026-05-31T06:45:55Z"
+    "lastSyncedAt": "2026-06-10T22:46:16Z"
   },
   {
     "id": "modal-agentic_playwright",
@@ -209,7 +240,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-08T02:13:47Z",
-    "lastSyncedAt": "2026-05-31T06:45:55Z"
+    "lastSyncedAt": "2026-06-10T22:46:16Z"
   },
   {
     "id": "modal-qa-lab",
@@ -249,7 +280,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-04-22T20:39:00Z",
-    "lastSyncedAt": "2026-05-31T06:45:55Z"
+    "lastSyncedAt": "2026-06-10T22:46:16Z"
   },
   {
     "id": "modal-ai-pipeline",
@@ -289,7 +320,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:14:03Z",
-    "lastSyncedAt": "2026-05-31T06:45:55Z"
+    "lastSyncedAt": "2026-06-10T22:46:16Z"
   },
   {
     "id": "modal-cypress_automation_core",
@@ -320,6 +351,6 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:11:17Z",
-    "lastSyncedAt": "2026-05-31T06:45:55Z"
+    "lastSyncedAt": "2026-06-10T22:46:16Z"
   }
 ]
