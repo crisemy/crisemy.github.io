@@ -19,7 +19,7 @@ This repository includes a **Python-based automation agent** that runs on a sche
 
 ### How It Works
 
-```
+```bash
 GitHub API  ──►  update_portfolio.py  ──►  data/projects.json  ──►  GitHub Pages
                    (Python Agent)          (Source of Truth)         (Live Site)
 ```
@@ -39,6 +39,7 @@ You can trigger a run at any time from the **Actions** tab on GitHub:
 3. Optionally enable **Dry Run** to preview changes without writing anything
 
 ![Github Deployment](./images/github-deployment.png)
+
 ### Adding a New Project to the Portfolio
 
 To have a new GitHub repository appear automatically on the portfolio:
@@ -52,7 +53,7 @@ To have a new GitHub repository appear automatically on the portfolio:
 
 ## Project Structure
 
-```
+```bash
 crisemy.github.io/
 ├── index.html                  # Main HTML — layout only, no hardcoded project data
 ├── script.js                   # Fetches projects.json and renders cards + modals dynamically
@@ -113,6 +114,7 @@ npm run dev:css
 The generated file `tailwind-output.css` is referenced in `index.html`.
 
 ### What changed with Tailwind
+
 - Navbar, hero, featured cards, about, services, timeline, and footer migrated to Tailwind utilities for responsive spacing and hover states.
 - Cards now have gradient hover accents and a clearer grid layout on desktop (2–3 columns).
 - Custom CSS was pruned; only brand/glass tokens remain in `assets/css/style.css`.
@@ -132,6 +134,7 @@ python3 scripts/update_portfolio.py
 ```
 
 > **Tip:** Set the `GITHUB_TOKEN` environment variable to increase the API rate limit from 60 to 5,000 requests per hour:
+
 > ```bash
 > export GITHUB_TOKEN=your_personal_access_token
 > python3 scripts/update_portfolio.py --dry-run
@@ -144,6 +147,7 @@ python3 scripts/update_portfolio.py
 Each project in the JSON array follows this structure:
 
 | Field | Type | Description |
+
 |---|---|---|
 | `id` | `string` | Unique modal ID (e.g. `modal-ai-testing`) |
 | `title` | `string` | Display title |
@@ -164,6 +168,7 @@ Each project in the JSON array follows this structure:
 ## Tech Stack
 
 | Layer | Technology |
+
 |---|---|
 | Frontend | Vanilla HTML5, CSS3, JavaScript (ES2020) |
 | Styling | Custom CSS — glassmorphism, CSS animations, CSS variables |
@@ -181,4 +186,4 @@ This project is open source. MIT License.
 
 ---
 
-*Built and maintained by [Cristian Nadj](https://crisemy.github.io) — Senior QA Engineer & Test Architect*
+*Built and maintained by [Cristian N.](https://crisemy.github.io) — Senior QA Engineer & Test Architect*
