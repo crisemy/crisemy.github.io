@@ -2,13 +2,13 @@
 
 ## Project Identity
 
-Personal portfolio site for **Cristian Nadj** — Senior QA Engineer & Test Architect (20+ years). The site lives at **https://crisemy.github.io** and is auto-populated with GitHub repositories tagged with `portfolio-qa`.
+Personal portfolio site for **Cristian N.** — Senior QA Engineer & Test Architect (20+ years). The site lives at **<https://crisemy.github.io>** and is auto-populated with GitHub repositories tagged with `portfolio-qa`.
 
 ---
 
 ## Core Workflow
 
-```
+```bash
 GitHub API  ──►  update_portfolio.py  ──►  data/projects.json  ──►  GitHub Pages
                    (Python Agent)           (Source of Truth)        (Live Site)
 ```
@@ -23,7 +23,7 @@ GitHub API  ──►  update_portfolio.py  ──►  data/projects.json  ─�
 
 ## Repository Structure
 
-```
+```bash
 crisemy.github.io/
 ├── index.html                   # Static layout, no hardcoded projects
 ├── assets/
@@ -52,6 +52,7 @@ crisemy.github.io/
 ## Agent Script: `scripts/update_portfolio.py`
 
 | Concern | Implementation |
+
 |---|---|
 | **API calls** | `urllib.request` — stdlib, no external deps |
 | **Auth** | Reads `GITHUB_TOKEN` env var; falls back to unauthenticated (60 req/hr) |
@@ -66,6 +67,7 @@ crisemy.github.io/
 ### Project JSON Schema
 
 | Field | Type | Notes |
+
 |---|---|---|
 | `id` | string | e.g. `modal-ai-test-generator` |
 | `title` | string | Display name |
@@ -113,7 +115,7 @@ crisemy.github.io/
 
 ## How to Add a New Project
 
-1. Go to the desired GitHub repo → ⚙️ About → Topics
+1. Go to the desired GitHub repo → About → Topics
 2. Add topic **`portfolio-qa`**
 3. Wait for next Sunday's cron (or trigger the action manually)
 
