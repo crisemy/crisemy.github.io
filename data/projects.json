@@ -16,7 +16,7 @@
     "features": [
       "Repository: https://github.com/crisemy/ai-evaluation-harness",
       "Primary language: Python",
-      "Last updated: 2026-07-11",
+      "Last updated: 2026-07-17",
       "Topics: portfolio-qa"
     ],
     "githubUrl": "https://github.com/crisemy/ai-evaluation-harness",
@@ -27,8 +27,8 @@
     "repoTopics": [
       "portfolio-qa"
     ],
-    "repoUpdatedAt": "2026-07-11T11:47:39Z",
-    "lastSyncedAt": "2026-07-12T05:46:09Z"
+    "repoUpdatedAt": "2026-07-17T11:33:50Z",
+    "lastSyncedAt": "2026-07-19T05:41:32Z"
   },
   {
     "id": "modal-ai_test_orchestrator",
@@ -59,7 +59,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-06-19T17:56:17Z",
-    "lastSyncedAt": "2026-07-12T05:46:09Z"
+    "lastSyncedAt": "2026-07-19T05:41:32Z"
   },
   {
     "id": "modal-agentic_playwright",
@@ -90,7 +90,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-06-12T22:46:09Z",
-    "lastSyncedAt": "2026-07-12T05:46:09Z"
+    "lastSyncedAt": "2026-07-19T05:41:32Z"
   },
   {
     "id": "modal-ai-testing",
@@ -132,7 +132,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-29T02:21:57Z",
-    "lastSyncedAt": "2026-07-12T05:46:09Z"
+    "lastSyncedAt": "2026-07-19T05:41:32Z"
   },
   {
     "id": "modal-auto_qa_agent_insight",
@@ -163,7 +163,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-28T16:13:49Z",
-    "lastSyncedAt": "2026-07-12T05:46:09Z"
+    "lastSyncedAt": "2026-07-19T05:41:32Z"
   },
   {
     "id": "modal-owasp_llm",
@@ -194,7 +194,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-28T14:19:32Z",
-    "lastSyncedAt": "2026-07-12T05:46:09Z"
+    "lastSyncedAt": "2026-07-19T05:41:32Z"
   },
   {
     "id": "modal-ai-test",
@@ -240,7 +240,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-23T17:13:16Z",
-    "lastSyncedAt": "2026-07-12T05:46:09Z"
+    "lastSyncedAt": "2026-07-19T05:41:32Z"
   },
   {
     "id": "modal-frontier_llm_safetyops",
@@ -271,7 +271,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-05-18T14:20:56Z",
-    "lastSyncedAt": "2026-07-12T05:46:09Z"
+    "lastSyncedAt": "2026-07-19T05:41:32Z"
   },
   {
     "id": "modal-qa-lab",
@@ -311,7 +311,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-04-22T20:39:00Z",
-    "lastSyncedAt": "2026-07-12T05:46:09Z"
+    "lastSyncedAt": "2026-07-19T05:41:32Z"
   },
   {
     "id": "modal-ai-pipeline",
@@ -351,7 +351,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:14:03Z",
-    "lastSyncedAt": "2026-07-12T05:46:09Z"
+    "lastSyncedAt": "2026-07-19T05:41:32Z"
   },
   {
     "id": "modal-cypress_automation_core",
@@ -382,6 +382,6 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:11:17Z",
-    "lastSyncedAt": "2026-07-12T05:46:09Z"
+    "lastSyncedAt": "2026-07-19T05:41:32Z"
   }
 ]
