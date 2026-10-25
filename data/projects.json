@@ -16,7 +16,7 @@
     "features": [
       "Repository: https://github.com/crisemy/owasp-llm",
       "Primary language: Python",
-      "Last updated: 2026-10-15",
+      "Last updated: 2026-10-21",
       "Topics: portfolio-qa"
     ],
     "githubUrl": "https://github.com/crisemy/owasp-llm",
@@ -27,8 +27,8 @@
     "repoTopics": [
       "portfolio-qa"
     ],
-    "repoUpdatedAt": "2026-10-15T23:21:50Z",
-    "lastSyncedAt": "2026-10-18T07:29:22Z"
+    "repoUpdatedAt": "2026-10-21T18:08:49Z",
+    "lastSyncedAt": "2026-10-25T07:52:54Z"
   },
   {
     "id": "modal-ai-testing",
@@ -58,7 +58,7 @@
       "Offline, interactive analytics Streamlit Dashboard built with Plotly",
       "Repository: https://github.com/crisemy/ai-testing-prompts-agents",
       "Primary language: Python",
-      "Last updated: 2026-10-15",
+      "Last updated: 2026-10-21",
       "Topics: portfolio-qa"
     ],
     "githubUrl": "https://github.com/crisemy/ai-testing-prompts-agents",
@@ -69,8 +69,8 @@
     "repoTopics": [
       "portfolio-qa"
     ],
-    "repoUpdatedAt": "2026-10-15T23:21:49Z",
-    "lastSyncedAt": "2026-10-18T07:29:22Z"
+    "repoUpdatedAt": "2026-10-21T18:08:47Z",
+    "lastSyncedAt": "2026-10-25T07:52:54Z"
   },
   {
     "id": "modal-frontier_llm_safetyops",
@@ -101,7 +101,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-10-15T20:05:32Z",
-    "lastSyncedAt": "2026-10-18T07:29:22Z"
+    "lastSyncedAt": "2026-10-25T07:52:54Z"
   },
   {
     "id": "modal-ai-test",
@@ -147,7 +147,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-10-15T20:02:41Z",
-    "lastSyncedAt": "2026-10-18T07:29:22Z"
+    "lastSyncedAt": "2026-10-25T07:52:54Z"
   },
   {
     "id": "modal-auto_qa_agent_insight",
@@ -178,7 +178,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-10-15T20:01:35Z",
-    "lastSyncedAt": "2026-10-18T07:29:22Z"
+    "lastSyncedAt": "2026-10-25T07:52:54Z"
   },
   {
     "id": "modal-qa-lab",
@@ -218,7 +218,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-10-15T19:58:57Z",
-    "lastSyncedAt": "2026-10-18T07:29:22Z"
+    "lastSyncedAt": "2026-10-25T07:52:54Z"
   },
   {
     "id": "modal-agentic_playwright",
@@ -249,7 +249,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-10-15T19:58:33Z",
-    "lastSyncedAt": "2026-10-18T07:29:22Z"
+    "lastSyncedAt": "2026-10-25T07:52:54Z"
   },
   {
     "id": "modal-ai_evaluation_harness",
@@ -280,7 +280,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-10-15T19:58:24Z",
-    "lastSyncedAt": "2026-10-18T07:29:22Z"
+    "lastSyncedAt": "2026-10-25T07:52:54Z"
   },
   {
     "id": "modal-ai_test_orchestrator",
@@ -311,7 +311,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-10-15T19:58:16Z",
-    "lastSyncedAt": "2026-10-18T07:29:22Z"
+    "lastSyncedAt": "2026-10-25T07:52:54Z"
   },
   {
     "id": "modal-cypress_automation_core",
@@ -342,7 +342,7 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-10-15T19:58:14Z",
-    "lastSyncedAt": "2026-10-18T07:29:22Z"
+    "lastSyncedAt": "2026-10-25T07:52:54Z"
   },
   {
     "id": "modal-ai-pipeline",
@@ -382,6 +382,6 @@
       "portfolio-qa"
     ],
     "repoUpdatedAt": "2026-03-24T10:14:03Z",
-    "lastSyncedAt": "2026-10-18T07:29:22Z"
+    "lastSyncedAt": "2026-10-25T07:52:54Z"
   }
 ]
